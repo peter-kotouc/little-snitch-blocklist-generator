@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "node --expose-gc --test --test-reporter=spec tests/*.test.js",
-    "build:cloudflare": "npm run test && rm -rf tests scripts .github package*.json README.md INSTRUCTIONS.txt"
+    "build:cloudflare": "npm run test && rm -rf tests scripts .github package*.json README.md INSTRUCTIONS.txt CONTRIBUTING.md .gitignore LICENSE"
   },
   "author": "Peter Kotouc",
   "license": "MIT"
