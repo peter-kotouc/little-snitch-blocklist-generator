@@ -1,7 +1,7 @@
 # Blocklist: hagezi-light
 # Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/light.txt
 # License: GPL-3.0 license (https://github.com/hagezi/dns-blocklists/blob/main/LICENSE)
-# Processed: 2026-03-01T23:02:17Z
+# Processed: 2026-03-01T23:38:47Z
 0-02.net
 0-3.org
 0-btc.com
@@ -11284,7 +11284,6 @@
 66xyf01w9d4hclas56xah50ew7yp71770172947.uaid.nmrodam.com
 67-google.com
 6703768.fls.doubleclick.net
-67049218.xyz
 6709910.fls.doubleclick.net
 67106500.global.siteimproveanalytics.io
 6710741.fls.doubleclick.net
@@ -11319,14 +11318,12 @@
 678100.cfd
 678106.cfd
 67817f3133e3a83f.com
-67824190.xyz
 6783193.fls.doubleclick.net
 6784358.fls.doubleclick.net
 67855011.global.siteimproveanalytics.io
 6786614e2cfeb07fc2ce8503f088e04a.safeframe.googlesyndication.com
 67874afeb9ccdbe3.com
 6789.net
-67908415.xyz
 6793729.fls.doubleclick.net
 67944.global.siteimproveanalytics.io
 679475eb3e3de5e74e23d47f1f8a32f5.safeframe.googlesyndication.com
@@ -11358,7 +11355,6 @@
 681d109f32910a5b8563c8235536c997.safeframe.googlesyndication.com
 681e3782cd4b5825ff9c797149883861.safeframe.googlesyndication.com
 6820tp1.com
-68254093.xyz
 6828d85307e69179.com
 682edf08b677e5625c15d2c5a2f4bc28.safeframe.googlesyndication.com
 683-cdi-815.mktoresp.com
@@ -11438,9 +11434,7 @@
 68889.global.siteimproveanalytics.io
 68897f92ee845bdc.com
 6889c59807ab2506.com
-68921534.xyz
 68956.global.siteimproveanalytics.io
-68969347.cfd
 6897834.cfd
 6899c0f13625.info
 68a64391ef63c566497246f32c7590da.safeframe.googlesyndication.com
@@ -11546,7 +11540,6 @@
 6a8596c4bfdd1e69.com
 6a881da8ad28c465324e2f0aaf0d91f8.safeframe.googlesyndication.com
 6a928c0842d41c59.com
-6aa5285fd8.com
 6aa818fa18fcfd647911433d8d9f7c98.safeframe.googlesyndication.com
 6aa97cb7338b77fa3682e90f4d55b904.safeframe.googlesyndication.com
 6aba3675120fea138d5ddb968236d008c4ad7dda.cws.conviva.com
@@ -11639,7 +11632,6 @@
 6cd2678d2b93857fb5953656baff4a47.safeframe.googlesyndication.com
 6ce34aec4bb5b14d734b82fcd062f1d7.safeframe.googlesyndication.com
 6cf177a819a707df.com
-6cf3173bd906b246af3e7e154a8cc948.boats
 6cf34a27da4cdd6c.com
 6cf4efb0e69832d10a0b705bd05ea31f.cyou
 6cf9lp.cdn-settings.appsflyersdk.com
@@ -11717,7 +11709,6 @@
 6ef18532829a870f.com
 6ef8695f3e9b7460989d0b5ab0ee3b28.safeframe.googlesyndication.com
 6efd1158e36b1cd3f226cdd3d581a481.safeframe.googlesyndication.com
-6f01a49cb4.com
 6f0394ddacca89ce.com
 6f065fbece62ef4d07edc548a6e7ac17.safeframe.googlesyndication.com
 6f0d80916ec2e622.com
@@ -11874,7 +11865,6 @@
 6pv6xm-launches.appsflyersdk.com
 6q5bvj.launches.appsflyersdk.com
 6q5tp9ezqsl1alm1v7x6qktdb2m871761853874.uaid.vtwenty.com
-6qhb2r.lol
 6qruzo-skadsdk.appsflyersdk.com
 6qt6ot9dgxb76yplhcngjklhzns3q1770405282.nuid.imrworldwide.com
 6qykhu-attr.appsflyersdk.com
@@ -11917,7 +11907,6 @@
 6umr.mjt.lu
 6uolf-q3jv3.ads.tremorhub.com
 6uolf-ryh1d.ads.tremorhub.com
-6uwyty.lat
 6uxx3e.launches.appsflyersdk.com
 6uxx3e.skadsdkless.appsflyersdk.com
 6v4.cn
@@ -11930,15 +11919,12 @@
 6vh9ga-cdn-settings.appsflyersdk.com
 6vh9ga-launches.appsflyersdk.com
 6vvqb9o8wztd6ilignpby1syfc2sl1770494569.uaid.nmrodam.com
-6wg2trw.lol
 6wh53hqfys9fuptwlzyjfy8ke688m1771623331.uaid.nmrodam.com
 6wk96tlc9dg48wrcpht3kajof1t4m1769021518.uaid.nmrodam.com
 6wl5cg-cdn-settings.appsflyersdk.com
 6wl5cg-launches.appsflyersdk.com
-6wtet63.lat
 6wthrizcnfaetrr9xg3o7lpkxmy181762967574.nuid.imrworldwide.com
 6wx1pwi4ghaexv4zifsasytpxjyv41765311556.nuid.nmrodam.com
-6wye73yw.cfd
 6wzdsf.ru
 6x54ktvg4p.kameleoon.eu
 6ycgh5-cdn-settings.appsflyersdk.com
@@ -12057,7 +12043,6 @@
 714d77ad53880f5c.com
 715-yzo-232.mktoresp.com
 7153bd6db151f450.com
-715b85f2cbba500a.com
 716b697a7ec8d9ae46b9699ff1962c65.safeframe.googlesyndication.com
 716bc22b442a5d5b.com
 71713d5818af373424519e585ffff78b.safeframe.googlesyndication.com
@@ -12102,8 +12087,6 @@
 7227272.collect.igodigital.com
 722b28e8b67d37bc5dcaf10a519a3169.safeframe.googlesyndication.com
 722f9da27eb6a42c.com
-7231a0692e.com
-72348727385.cfd
 7237004eda1a85eea537c4622f779f33.safeframe.googlesyndication.com
 7242857b3ad39f53.com
 7242dc90c9a4936370fdfbad5e33d1d9.safeframe.googlesyndication.com
@@ -12112,12 +12095,10 @@
 72578938aae668ea.com
 725d991a9750fddd.com
 725fe37fb6a9d06b461aaaf5d6fbd05a.com
-725wffw.lat
 72658230bf849396.com
 727194796592392.wt-eu02.net
 7277445b9c3ddf1d.com
 728-ct.c3tag.com
-7282p182xs28.lat
 728c9edcd98389a4.com
 728d36183f78a8a7983dab688a2072ac.safeframe.googlesyndication.com
 728e89c437.1270533dea.com
@@ -12144,7 +12125,6 @@
 72pz2b.inapps.appsflyersdk.com
 72pz2b.launches.appsflyersdk.com
 72wlqc.launches.appsflyersdk.com
-72ytywtw.lol
 73-google.com
 730df9e65051c033bd3f4d09b46f2e44.safeframe.googlesyndication.com
 730fcb332f.com
@@ -12164,12 +12144,10 @@
 735-fde-383.mktoresp.com
 735243bfc0e75b5bce5e2d7f65114369.safeframe.googlesyndication.com
 735624304db39b48639a6931cf160d91.safeframe.googlesyndication.com
-73584602.xyz
 73594b56fa4024614724743392dd236f.safeframe.googlesyndication.com
 735ccd763ea591d7374902d8b1a39dd0f8f5eb39.com
 735kavbet.com
 7362a95e4819c1d44c1291e78616bebe.safeframe.googlesyndication.com
-73641805.xyz
 736983295f9d9a2e0d18ebea6474c515.safeframe.googlesyndication.com
 736bfc60637cf4aa.com
 73706faa723b872090ca945d1d4bf140.safeframe.googlesyndication.com
@@ -12209,13 +12187,10 @@
 740-ibo-752.mktoresp.com
 7410494560c67ccbeddeea98fb44b54a.safeframe.googlesyndication.com
 74163.cfd
-74198620.xyz
-74198651.xyz
 741b3755e0268441.com
 742-lzy-231.mktoresp.com
 74299deb2b72d23f16dbfedffe440381.safeframe.googlesyndication.com
 742cf09c5b577ad6.com
-74324323.lat
 7439cc1247d6a41dbc7d8384694f98ae.safeframe.googlesyndication.com
 7442601aacb64293.com
 74427e51473ab350.com
@@ -12235,7 +12210,6 @@
 746hillbet.com
 74783.cfd
 7485693.cfd
-74862035.xyz
 74882a393e4e902b23d4cf6962a6d91f.com
 748da71b414642e3.com
 748e286768d3.info
@@ -12255,7 +12229,6 @@
 74b5b13125a4010fa7cf2bff8dc6b5f4.safeframe.googlesyndication.com
 74b998e36e690304bc7ebb3a9b276d6b.safeframe.googlesyndication.com
 74c8315a45a3790f4dc6d13d657f76a9.safeframe.googlesyndication.com
-74d2746616.com
 74d7e6c261f3939ec5ea031138f87da3.safeframe.googlesyndication.com
 74ea5647ac6c528063a21d9187e9306c.safeframe.googlesyndication.com
 74f00693f2fcf21a49bb7ab7d042f2d9.safeframe.googlesyndication.com
@@ -12273,9 +12246,6 @@
 752891-apple.com
 752983c05d1211c1.com
 7533d39b66a44a448c8783bcb879eec2.js.ubembed.com
-75431.cfd
-75480912.xyz
-7548912.cc
 755-google.com
 755d00c25950a100.com
 755dd34ac3c8b3b8.com
@@ -12289,7 +12259,6 @@
 757a13cb6f90c306e47fab7505e25a4a.safeframe.googlesyndication.com
 757e405e2005db8a.com
 758119b496e3bbede97be91db5ea1f7b.com
-75845.cfd
 7585fad2b176dd1ebd03151ce4bd302f.safeframe.googlesyndication.com
 75903cece4717af8.com
 7592b6798b.top
@@ -12305,7 +12274,6 @@
 75c6a97f3f7586e8.com
 75caa462e6a1e8896575ab511474727c.safeframe.googlesyndication.com
 75cc123c8af3916b.com
-75d30143b9.com
 75e60536c612b7eb04b5992595f83050.com
 75e7645a8acd16a47c3ec4e1b4c1f6ca.safeframe.googlesyndication.com
 75f2a9a3ffe2d133.com
@@ -12395,7 +12363,6 @@
 776242383.cfd
 7762c23f824102f1568da6253f28ece3.safeframe.googlesyndication.com
 7768697465686f757365.com
-776a2b6c6f645e4c65e0845e823f13ef.cfd
 776a44974bd51fbd388cd84aec415e40.safeframe.googlesyndication.com
 777-avu-348.mktoresp.com
 777-zru-437.mktoresp.com
@@ -12434,7 +12401,6 @@
 781081410579-uspro-s3-telemetry-overflow.s3.us-east-1.amazonaws.com
 7811bdd96dba6c7a.com
 78152.global.siteimproveanalytics.io
-78153406.xyz
 78154.global.siteimproveanalytics.io
 78169da6d30ab686.com
 781ab4daf752.info
@@ -12456,7 +12422,6 @@
 785f10e5c97dc1ccfdce5af8b439763f.info
 785ff956634e142a.com
 786158a553af928b.com
-7865885.xyz
 7865e5521bf17799.com
 786a9694286e.info
 786ntegei6sqd8zdt9gfpksiiq7mb1768907432.uaid.nmrodam.com
@@ -12652,7 +12617,6 @@
 7cb0d47c30fa2950.com
 7cb15ebd928f8c8d.com
 7cb49fcd7c19f767.com
-7cc02479aa92d72dc78a7c14e99cab6d.live
 7cc0d9cf876fac9067099a4f84885d96.safeframe.googlesyndication.com
 7cd77.v.fwmrm.net
 7cdfeae43be9a33a55ae4fb10c0fa8fb.safeframe.googlesyndication.com
@@ -12713,7 +12677,6 @@
 7e14d.v.fwmrm.net
 7e1d2-dstack.v.fwmrm.net
 7e1d9503f1d69a7d7b4e65e23d3c8377.safeframe.googlesyndication.com
-7e22cd71c1.com
 7e2430b3500e474b.com
 7e28afa768e784daf94b976d5e0c70dd.safeframe.googlesyndication.com
 7e28b.v.fwmrm.net
@@ -12756,7 +12719,6 @@
 7em2oc.cdn-settings.appsflyersdk.com
 7ep4tf-cdn-settings.appsflyersdk.com
 7ep4tf-launches.appsflyersdk.com
-7euhy3e.sbs
 7f077.v.fwmrm.net
 7f0ux9jz165j41fay1xdau7e9t1pw1766049728.uaid.vtwenty.com
 7f140791ac08e566507018ec84a39eb6.safeframe.googlesyndication.com
@@ -12812,7 +12774,6 @@
 7givd0.inapps.appsflyersdk.com
 7givd0.launches.appsflyersdk.com
 7gjfw5-inapps.appsflyersdk.com
-7goxbet.com
 7h4t0zurkpbpzc9rjhxvvjspsdec81766850524.nuid.imrworldwide.com
 7hc4wv-cdn-settings.appsflyersdk.com
 7hmibdkky94ctzunylhkpvcemcrt11768722911.nuid.imrworldwide.com
@@ -12871,7 +12832,6 @@
 7lvikhshb3y4pswayh5kchobqvf7i1770852402.nuid.imrworldwide.com
 7lzmft.cdn-settings.appsflyersdk.com
 7lzmft.launches.appsflyersdk.com
-7mm63rzjrpq2619gpb5l9tf3r3x.cfd
 7moor.com
 7mts.com
 7n3gfe.cdn-settings.appsflyersdk.com
@@ -12973,11 +12933,8 @@
 7w9j8f.cdn-settings.appsflyersdk.com
 7w9j8f.inapps.appsflyersdk.com
 7w9j8f.launches.appsflyersdk.com
-7wgwtf5.lat
-7wh25rr.lol
 7wk11awbj3ptdkk5bo2z75301wf3v1771777213.uaid.nmrodam.com
 7wl22asegob993386p2c0z1w16syn1765236762.uaid.vtwenty.com
-7wnhe.cfd
 7wrewtkmd5kidujf5plkj6nxdybcl1770906485.nuid.nmrodam.com
 7wtjh7ven8hpaezsrdf8fz3hcvuux1768660023.uaid.nmrodam.com
 7wujb5-cdn-settings.appsflyersdk.com
@@ -13185,7 +13142,6 @@
 818e0aa2aebfd48cf87b6ad128144615.safeframe.googlesyndication.com
 819-rrq-060.mktoresp.com
 8191183.fls.doubleclick.net
-819222f244de3e95.com
 8196782.fls.doubleclick.net
 8199062.fls.doubleclick.net
 819e55f2db5d5ded9a37f43cd0c2286b.safeframe.googlesyndication.com
@@ -13229,7 +13185,6 @@
 8220823.fls.doubleclick.net
 8221262.fls.doubleclick.net
 8222283.fls.doubleclick.net
-82251093.xyz
 8227232.fls.doubleclick.net
 8228261.fls.doubleclick.net
 8228419.fls.doubleclick.net
@@ -13249,7 +13204,6 @@
 8235431.fls.doubleclick.net
 8236209.fls.doubleclick.net
 8236901.fls.doubleclick.net
-8237523752.cfd
 8239039.fls.doubleclick.net
 8239069.fls.doubleclick.net
 8239812.fls.doubleclick.net
@@ -13365,7 +13319,6 @@
 82ef0b11c96f884966cb7ef2b9d31667.safeframe.googlesyndication.com
 82f63.v.fwmrm.net
 82ir4e5wgykaarl1o4mbrrd41davn1763062249.nuid.imrworldwide.com
-82jw763.lat
 82kb.com
 830-dts-057.mktoresp.com
 8300362.fls.doubleclick.net
@@ -13472,7 +13425,6 @@
 841eda195c.com
 84218.global.siteimproveanalytics.io
 8422178.fls.doubleclick.net
-8423734.cfd
 84241f302617c46a.com
 8425100.fls.doubleclick.net
 8425369.fls.doubleclick.net
@@ -13493,7 +13445,6 @@
 8447809.fls.doubleclick.net
 844b7c7ae691af03.com
 8451442.fls.doubleclick.net
-84573.cfd
 84576e31fd8af6720d74ba08394d775f.safeframe.googlesyndication.com
 845d0bcc264f1cd6cc8140d57bf02d28.safeframe.googlesyndication.com
 845efea1ee6291354a9d36d8c9ddddab.safeframe.googlesyndication.com
@@ -13506,11 +13457,9 @@
 8464a5847b988192771d90692f3dd2d8.safeframe.googlesyndication.com
 8467144.fls.doubleclick.net
 8468614.fls.doubleclick.net
-84693051.xyz
 846oslobet.com
 847-ltk-200.mktoresp.com
 84751.global.siteimproveanalytics.io
-84752039.xyz
 8476719.fls.doubleclick.net
 8477518.fls.doubleclick.net
 8479206.fls.doubleclick.net
@@ -13525,7 +13474,6 @@
 8489402.fls.doubleclick.net
 849089c9470471b1.com
 8491270.fls.doubleclick.net
-84931526.xyz
 8493178.fls.doubleclick.net
 8494353.fls.doubleclick.net
 8494727.fls.doubleclick.net
@@ -13557,7 +13505,6 @@
 8503784217569de988fd93e6b5e1ce9c.safeframe.googlesyndication.com
 8505995.fls.doubleclick.net
 8508535f91725b9a5e9737a6818d52f4.safeframe.googlesyndication.com
-85109.cfd
 8512471.fls.doubleclick.net
 8512b548-2306-4976-a576-a880f2c35e4e.edge.permutive.app
 851a8bbe3284b8dfbe68073d7295babf.safeframe.googlesyndication.com
@@ -13596,9 +13543,7 @@
 8564687.fls.doubleclick.net
 8567930.fls.doubleclick.net
 85694da83753cc28.com
-85712721.cfd
 8571574.fls.doubleclick.net
-85716fa11b.com
 8571aa2e0d2674a5.com
 8573869.fls.doubleclick.net
 8579132.fls.doubleclick.net
@@ -13621,7 +13566,6 @@
 85f71cad7ff6ee346dade5b1ff6ebaba.safeframe.googlesyndication.com
 85otw.voluumtrk3.com
 85pnzt.cdn-settings.appsflyersdk.com
-86013292.xyz
 86027.global.siteimproveanalytics.io
 860365db57500a0db50813309036e993.com
 8604496.fls.doubleclick.net
@@ -13629,7 +13573,6 @@
 860f38c2c11914ebdac163d4b7a7c90f.safeframe.googlesyndication.com
 860fbb3105a5f4dfdf22b8217bd1922a.safeframe.googlesyndication.com
 861-rmi-846.mktoresp.com
-86121074.xyz
 8614c794670b1dd86131d8d35d8bfb0f.safeframe.googlesyndication.com
 8616000012c4f01d19510830dbd822ab.safeframe.googlesyndication.com
 8617520.fls.doubleclick.net
@@ -13641,7 +13584,6 @@
 8622906.fls.doubleclick.net
 8627469.fls.doubleclick.net
 862b6ad8-0b67-4de1-9a6e-9426ba5fc066.dns-clientinfo.vtg.paramount.tech
-86315924.xyz
 8632166.fls.doubleclick.net
 8633a290666691f6dda5fdf48268f8f7.safeframe.googlesyndication.com
 8636420.fls.doubleclick.net
@@ -13692,11 +13634,9 @@
 86a39f34e2d1db281243c3ee4956593a.safeframe.googlesyndication.com
 86aa9ef129596390.com
 86ab2d589144b0beab52783fa2fe201e.org
-86b0b62845b769fe5fb1f70f4118f76f.com
 86b174ac97d89be5.com
 86cb867413cae0692b1d5ee6df8534aa.safeframe.googlesyndication.com
 86d0aa7e8b7944eb.com
-86d18a073b4701f1d8e8663a2f0efb7d.com
 86d24ab4c64924c83ea86c0f2ceb5558.safeframe.googlesyndication.com
 86d2b3bc20423e875971b6e53af7782c.safeframe.googlesyndication.com
 86d4228a55454fb5.com
@@ -13726,19 +13666,16 @@
 872266.fls.doubleclick.net
 8724108.fls.doubleclick.net
 8724437.fls.doubleclick.net
-87264019.xyz
 8726804.fls.doubleclick.net
 8727219.fls.doubleclick.net
 8729037.fls.doubleclick.net
 8730549.fls.doubleclick.net
 8731124.fls.doubleclick.net
 8731199.fls.doubleclick.net
-87316495.xyz
 87371938f0b86f85.com
 8739809.fls.doubleclick.net
 873be4f25daf6f1c2e3c4c59d49ed0ed.safeframe.googlesyndication.com
 87407832e4a51a3b05864a796f78ff39.safeframe.googlesyndication.com
-87409162.xyz
 8741730.fls.doubleclick.net
 8743d1ffc8c7f534a9bd4bf5b1eabcc1.safeframe.googlesyndication.com
 8745be799d9a901ffc776461432f16b0.safeframe.googlesyndication.com
@@ -13750,7 +13687,6 @@
 875-uvy-685.mktoresp.com
 8750598.fls.doubleclick.net
 87533686ad09.com
-87541096.xyz
 87569e356ba89c10130916502e5ef8f7.safeframe.googlesyndication.com
 8757159.fls.doubleclick.net
 8758799.fls.doubleclick.net
@@ -13948,7 +13884,6 @@
 891288.birdseyewings.co
 8913748.fls.doubleclick.net
 8913afcb2cb9d1d6fdee817561caceab.safeframe.googlesyndication.com
-89153704.xyz
 8919336.fls.doubleclick.net
 8920331.fls.doubleclick.net
 8928300c81f3a4b8.com
@@ -14192,7 +14127,6 @@
 8d3ab791a0c4d480.com
 8d3c8b10b8150f70.com
 8d3cc91fd05e413d.com
-8d3e7e09046d782c23f1c57eef3bb0c4.com
 8d4482c906770a9d354c9ed7136e0265.safeframe.googlesyndication.com
 8d48620cb715db9a69c89ac7884a8377.safeframe.googlesyndication.com
 8d4f43db24c354d6.com
@@ -14210,7 +14144,6 @@
 8d96738be1cbbf22.com
 8d9944fbbaab4eb09faabbe34083d6b1.safeframe.googlesyndication.com
 8da96f0bde1bb5cb.com
-8da9e2b0b02615ae75111548e96b1ae4.com
 8dade728.de.ioam.de
 8daxuejvgyq9jk1pcceqzgzduordv1771278150.nuid.imrworldwide.com
 8db0ea.moe.video
@@ -14585,7 +14518,6 @@
 9059143.fls.doubleclick.net
 905trk.com
 9062211.fls.doubleclick.net
-90623774cb.com
 906297087410bae5305ca60bb41b8dfe2d618585.cws.conviva.com
 906297087410bae5305ca60bb41b8dfe2d618585.ipv4.cws.conviva.com
 906297087410bae5305ca60bb41b8dfe2d618585.ipv6.cws.conviva.com
@@ -14600,7 +14532,6 @@
 9077352.fls.doubleclick.net
 90781226.global.siteimproveanalytics.io
 90782204.global.siteimproveanalytics.io
-90783541.xyz
 9079101.fls.doubleclick.net
 9079915521ff267b.com
 907bb7317ae9a22474471ac91e78a936.safeframe.googlesyndication.com
@@ -14684,7 +14615,6 @@
 91488e2aae1dba50.com
 9149668.fls.doubleclick.net
 914c7386bd1d07c5cd5a3f2711dd96ac.safeframe.googlesyndication.com
-91504682.xyz
 9150507.fls.doubleclick.net
 915108f98658210ca706872a9f64a2e0.safeframe.googlesyndication.com
 9152494.fls.doubleclick.net
@@ -14818,7 +14748,6 @@
 9271888.fls.doubleclick.net
 9271966.fls.doubleclick.net
 9274690.fls.doubleclick.net
-9275d903w1.sbs
 927615140575951.wt-eu02.net
 9277513.fls.doubleclick.net
 928-sab-394.mktoresp.com
@@ -14831,7 +14760,6 @@
 9289578.fls.doubleclick.net
 9289611.fls.doubleclick.net
 928d983edf88a6b175b024e844bdc872.safeframe.googlesyndication.com
-92901.cyou
 9291910.fls.doubleclick.net
 9292852.fls.doubleclick.net
 9293948.fls.doubleclick.net
@@ -14935,7 +14863,6 @@
 9396304.fls.doubleclick.net
 9398189.fls.doubleclick.net
 9399534.fls.doubleclick.net
-9399f04ea4ff48b5e8ae1a6757fadd4c.com
 939b61b78e00690b8a1acef1230b5c07.safeframe.googlesyndication.com
 939ee97f6a721a119be654dab25c3027.safeframe.googlesyndication.com
 93b282ee46dfb7585425d03a82892f9a.safeframe.googlesyndication.com
@@ -14972,7 +14899,6 @@
 9418551.fls.doubleclick.net
 9418626.fls.doubleclick.net
 9419096.fls.doubleclick.net
-9419efc8f6.com
 941a6cfd74cab52b1d17a3e092756e86.me
 942-mym-356.mktoresp.com
 9420454.fls.doubleclick.net
@@ -14999,7 +14925,6 @@
 9448697.fls.doubleclick.net
 9448994.fls.doubleclick.net
 9449760e6ee4b60f124970759b3d4354.safeframe.googlesyndication.com
-944betvolle.com
 944ec170807bcc6248d796c2eaf70c72.safeframe.googlesyndication.com
 944f448678845e7f.com
 9454667.fls.doubleclick.net
@@ -15033,8 +14958,6 @@
 9481836.fls.doubleclick.net
 9482176.fls.doubleclick.net
 9482185.fls.doubleclick.net
-94851.cfd
-94871.cfd
 9487904.fls.doubleclick.net
 949-sud-331.mktoresp.com
 949048a0d4a323fb.com
@@ -15060,7 +14983,6 @@
 9504378.fls.doubleclick.net
 9504840.fls.doubleclick.net
 95056ac920.62d280f2c7.com
-95063174.xyz
 9506869.fls.doubleclick.net
 950780829895980c.com
 9508895.fls.doubleclick.net
@@ -15135,7 +15057,6 @@
 957ad45732f4f52a.com
 9580b8374a5f4dbf9c35faa28d615bbc.js.ubembed.com
 9580c768ec2a0b0c3f1fe5946bcae0c5.icu
-958124.cfd
 9582779.fls.doubleclick.net
 9582953.fls.doubleclick.net
 9582b7b0af74f5db3b33d63b75b64e49.safeframe.googlesyndication.com
@@ -15169,7 +15090,6 @@
 95l008.cdn-settings.appsflyersdk.com
 95l008.launches.appsflyersdk.com
 960221b81ff653a8272abaa41ac2b6bb.com
-96028451.xyz
 9605173.fls.doubleclick.net
 9608194.fls.doubleclick.net
 96106519-dfd1-4f64-962a-8c02ecb19c63.dns-clientinfo.vtg.paramount.tech
@@ -15277,7 +15197,6 @@
 9685871.fls.doubleclick.net
 968634650.fls.doubleclick.net
 9686416e4b238a0394efb0433b36de58.com
-96876986.xyz
 96886mc.r0l7cp.com
 968c3fa71579f80e.com
 968cd5b7d54a4d689a78fcb0f404f7e5.safeframe.googlesyndication.com
@@ -15296,18 +15215,15 @@
 96yyrsqxp4.kameleoon.io
 97023354570dfa19.com
 9703283.fls.doubleclick.net
-97038612.xyz
 9705872.fls.doubleclick.net
 970kpx8rfyhv2wh5um7smgkdkfmsh1772004151.uaid.nmrodam.com
 9711185b15b0b693.com
 9713980.fls.doubleclick.net
 971ae0488595ca554645bba94421aab6.safeframe.googlesyndication.com
-971f0a193b.com
 972-oec-621.mktoresp.com
 9721883.fls.doubleclick.net
 9725023.fls.doubleclick.net
 9725704.fls.doubleclick.net
-97264518.xyz
 97271f369942c1aede63a3ece4d44e29.safeframe.googlesyndication.com
 97281.cfd
 97282.cfd
@@ -15426,7 +15342,6 @@
 9815365.fls.doubleclick.net
 98158.com
 9816377.fls.doubleclick.net
-9817052c4d6b.top
 981722-ticket-cb.com
 981723-apple.com
 981755a6916a46c5a526967dceb1155d.safeframe.googlesyndication.com
@@ -15461,7 +15376,6 @@
 983e2d0c6016e48a5cc4872e00de2fed.safeframe.googlesyndication.com
 984-xhe-138.mktoresp.com
 9841216.fls.doubleclick.net
-98431.cfd
 9845296.fls.doubleclick.net
 9847590.fls.doubleclick.net
 9848416.fls.doubleclick.net
@@ -15508,7 +15422,6 @@
 9883338.fls.doubleclick.net
 9884e9ea6c5d54a2c099adb4495680aa.safeframe.googlesyndication.com
 9885066.fls.doubleclick.net
-98851.cfd
 9889908.fls.doubleclick.net
 988a8d4db95ca6d32b0884315fb96f91.safeframe.googlesyndication.com
 988betoffice.com
@@ -15534,7 +15447,6 @@
 98loux-launches.appsflyersdk.com
 99-drugs.com
 9903082.fls.doubleclick.net
-9903512.cfd
 9903671.fls.doubleclick.net
 9909783.fls.doubleclick.net
 990b20a2e2aca1bc.com
@@ -15603,7 +15515,6 @@
 9982425.fls.doubleclick.net
 9982428.fls.doubleclick.net
 9983251.fls.doubleclick.net
-9984f9f9f9.sbs
 998766.fls.doubleclick.net
 998d3c645c4a9e71b27b8e1ba3b17fa0.safeframe.googlesyndication.com
 999.com
@@ -15812,7 +15723,6 @@
 9ea22f3ed41bff2bde90a6a995672988.safeframe.googlesyndication.com
 9ea290405584d552ad9b1a11a91f38da.safeframe.googlesyndication.com
 9eb3ebca2790b246705bff63cc5491ca.safeframe.googlesyndication.com
-9eb7c71cb8414b62.com
 9ec0fd158ee66049117df70177d3ada9.safeframe.googlesyndication.com
 9ec12b5640a8ef0375f2eb06cf3d3238.safeframe.googlesyndication.com
 9ec5e6960395d4bdbbc13e68ff9169af.safeframe.googlesyndication.com
@@ -15847,7 +15757,6 @@
 9f282cdc45edd3e22085de8bec3abb7a.safeframe.googlesyndication.com
 9f298f029b14abae5335ad921070dd10.safeframe.googlesyndication.com
 9f3a7cde21.online
-9f3d4ef4e9.com
 9f3ee7bab1527309d4388f0d517cf724.safeframe.googlesyndication.com
 9f3f0241c6.812f3647c3.com
 9f4236b73dfe67a9d2667189f0bdd59b.safeframe.googlesyndication.com
@@ -15873,7 +15782,6 @@
 9fb4c2169a4a8606580debb84608cc5b.safeframe.googlesyndication.com
 9fb791b049de23fc7152e62652a745e0.safeframe.googlesyndication.com
 9fd13ac2879a9743b908122b37dbb8cd.safeframe.googlesyndication.com
-9fd2b412bedb9113.com
 9fefb752e248b675wap.jigool.org
 9few08.adrevenue.appsflyersdk.com
 9few08.cdn-settings.appsflyersdk.com
@@ -15957,7 +15865,6 @@
 9pj70w.launches.appsflyersdk.com
 9pj70w.skadsdkless.appsflyersdk.com
 9pub.io
-9q98wh.lat
 9qevcvuwrrcolncvofzr6vz7kpwak1771779398.darnuid.imrworldwide.com
 9qjbah.ru
 9qpfll-cdn-settings.appsflyersdk.com
@@ -16006,7 +15913,6 @@
 9vyraf-launches.appsflyersdk.com
 9w6gfu.cdn-settings.appsflyersdk.com
 9w6gfu.conversions.appsflyersdk.com
-9w7yhd.lat
 9wbrdw-cdn-settings.appsflyersdk.com
 9wbrdw-inapps.appsflyersdk.com
 9wbrdw-launches.appsflyersdk.com
@@ -17317,7 +17223,6 @@ a1757.casalemedia.com
 a1758.casalemedia.com
 a1759.casalemedia.com
 a1760.casalemedia.com
-a17607ddd6.top
 a177.casalemedia.com
 a178.casalemedia.com
 a179.casalemedia.com
@@ -19413,7 +19318,6 @@ a499.casalemedia.com
 a4990.casalemedia.com
 a49940d5c323e592d2ed0adc99d4d8ae.safeframe.googlesyndication.com
 a4998.casalemedia.com
-a49ce047f03894e7.com
 a4a518a8f3dc46e3.com
 a4a5403e8c.top
 a4b14e381dbc4b61.com
@@ -19424,7 +19328,6 @@ a4c55550a5b09c1d.com
 a4c96bc3dada9c6c.com
 a4cb31aa7b.top
 a4ccb7bda79d4fc391810b36aca61fb9.js.ubembed.com
-a4d2v8.lat
 a4d86d81316262d24c7c7393cf3f6c31.safeframe.googlesyndication.com
 a4d9053863bdd402b54c3e8ea9c6aaa7.safeframe.googlesyndication.com
 a4dad194391c4cea.com
@@ -20061,7 +19964,6 @@ a5870.casalemedia.com
 a5901d5ab28e131df823cf17c795ff48.safeframe.googlesyndication.com
 a59ab6c08ad11d222175eb3694ee4a4d.safeframe.googlesyndication.com
 a59fd41ae38bfd0c.com
-a5a046122d.top
 a5a266b68f64bd40.com
 a5a3f5113ddbbce9b95f8364e93eafa1.safeframe.googlesyndication.com
 a5a971929d22c780.com
@@ -20175,7 +20077,6 @@ a6b5b9392e3fc97afc1a5af5f8350080.top
 a6bfuv.cdn-settings.appsflyersdk.com
 a6bfuv.conversions.appsflyersdk.com
 a6c4cc5c87df43cc.com
-a6d153a354.com
 a6d46164fddd6059c05d5573cd1979e7.safeframe.googlesyndication.com
 a6d562009423dc2c01caa9a234bfdbfb.site
 a6def2ef910.pw
@@ -20255,7 +20156,6 @@ a7f1crak4ywlugojne7fimmrwx4oh1771442257.nuid.imrworldwide.com
 a7f2dfd19b2a9880.com
 a7fcf7c7d3d07d81cdbb4d0ef4ea474e.safeframe.googlesyndication.com
 a7ff9e1252.top
-a7k9c1.sbs
 a802c231eeb82b26.com
 a80304b501fdf685.com
 a80b99026d3aa7eb9636aa144d1a247f.cfd
@@ -20290,7 +20190,6 @@ a8819d842a28d2b5.com
 a88e3af27b89b369.com
 a892e4552d6dd666.com
 a89d2a5a77a6a5c4ca8a72d11fd01986.safeframe.googlesyndication.com
-a89da7e9316a59cf612f3a708aaf3e40.com
 a89fe8c2490e6608.com
 a8a23e6cfd9ce17d5057aeb9de148b9b.safeframe.googlesyndication.com
 a8a29062d6a21c0babf216da37da59a0.safeframe.googlesyndication.com
@@ -20355,7 +20254,6 @@ a9a33655e20c4413.com
 a9a7048693b0834f.com
 a9b6e326b5328c7c22d42e271ba73141.safeframe.googlesyndication.com
 a9b71ef8cfa4d905.com
-a9ba3933dc77438c110fad9f1ecb4b49.boats
 a9bec3f76a0c220ee8b8faba2b92748b.safeframe.googlesyndication.com
 a9c44574810597e85376e70bc33a5b39.safeframe.googlesyndication.com
 a9c567a82af8c997acbc556cdf8174b6.safeframe.googlesyndication.com
@@ -20407,7 +20305,6 @@ aa45119e8cec9d705e9a550a0cd20469.safeframe.googlesyndication.com
 aa4bdfe9d861dcc36523d94cd39fad2b.safeframe.googlesyndication.com
 aa4ec9bbfb7bb2928f984ed641efbca1.safeframe.googlesyndication.com
 aa5aa5aa5aa5aa195.com
-aa5aa5aa5aa5aa196.com
 aa5aa5aa5aa5aa197.com
 aa5aa5aa5aa5aa206.com
 aa5aa5aa5aa5aa227.com
@@ -20418,7 +20315,6 @@ aa81c43ab1474993b6c7cc180304fe54.js.ubembed.com
 aa8345ed59.com
 aa8a2d48c918c27f.com
 aa8ca4798a751210f4712321fbe9bd0c.safeframe.googlesyndication.com
-aa9176a43b.com
 aa96fd4cb35d98c4f079a56b61c0a954.in
 aa97078129ef33fb52761c2737a26ecb.safeframe.googlesyndication.com
 aaa.a-mo.net
@@ -20428,22 +20324,10 @@ aaa.quantummetric.com
 aaa15917816159.com
 aaa243885d57eb903debf92c6b17ed37.safeframe.googlesyndication.com
 aaa9b0e3c487bd1c6d88dc09f25bde1e.safeframe.googlesyndication.com
-aaaaaa1010.shop
-aaaaaa110000.online
-aaaaaa1458.shop
-aaaaaa1885.online
-aaaaaa4256.shop
-aaaaaa44580.shop
-aaaaaa4550.online
-aaaaaa4638.online
-aaaaaa7782.online
-aaaaaa8965.site
 aaaaaaaaaaaaaaaaaaaaaaaaaa1.online
 aaaaaaaaaaaaaaaaaaaaaaaaaa1.ru
 aaaab441052.online
 aaaab70023.shop
-aaaab772003.online
-aaaab88002.online
 aaaacdn.com
 aaaadagxwrajaaaaaaaaaaa5ci.apm-agt.eu-frankfurt-1.oci.oraclecloud.com
 aaaautoclubsouth.demdex.net
@@ -20513,7 +20397,6 @@ aarp-tagan.adlightning.com
 aarp.demdex.net
 aarp.sv.rkdms.com
 aarpinfonetcms.112.2o7.net
-aarrta.cc
 aarzgcsyztgrs.site
 aas.visitsaudi.com
 aasaam.com
@@ -20577,14 +20460,12 @@ ab0ab8d4da3084bc8c37f961c2933c20.com
 ab0dfc25c4508dca.com
 ab10bba8aa183ce7c67137ecfbed24aa.safeframe.googlesyndication.com
 ab1145b758c30.com
-ab1364b49525b1df06b4b995c15c3c5c.com
 ab1abad1d0c2a.com
 ab1ac3f53731b4c4.com
 ab2840ac3cc53986.com
 ab288b.moe.video
 ab2da3d400c20.com
 ab309bddcc3c6c09.com
-ab321e4b3f.top
 ab32bf2f60faa886fca500afad2ccf9c.safeframe.googlesyndication.com
 ab344cc10303dd4888bc89e327f2a3c4.safeframe.googlesyndication.com
 ab39a63a788c657bdda8b578bc4f3fc8affc258c.cws.conviva.com
@@ -20718,12 +20599,6 @@ abpa.at
 abpg.nui.media
 abpicsrc.com
 abrahamyanlawoffices.com
-abrechnung18.icu
-abrechnung21.icu
-abrechnung291.icu
-abrechnung33.icu
-abrechnung38.icu
-abrechnung46.icu
 abrechnung7.icu
 abrechnung83.icu
 abroad-ad.kingsoft-office-service.com
@@ -20790,7 +20665,6 @@ abwdixodecuxf.site
 abxkftjg.usd.stape.io
 abxm.pw
 abxokzmu.com
-abyssflowpulse.site
 abyssos.eu
 abz.com
 abzadd.com
@@ -20849,7 +20723,6 @@ aca27ebfcf3d5009a98da0d105871087.safeframe.googlesyndication.com
 acacb.glassboxdigital.io
 acacdn.com
 academiaprogreso.com
-academice.top
 academy-market.com
 academy-skrf.ru
 academy.demdex.net
@@ -20883,7 +20756,6 @@ acceptableredheadcaviar.com
 acceptbusiness.net
 acceptguide.com
 acceptingwork.pro
-acces-canalplus.com
 access-radar.jp
 access-the-website.com
 access-vault-coinbase.com
@@ -20920,10 +20792,6 @@ accosabbon.rest
 account-architect.com
 account-assistance-auth-560.live
 account-assistance-auth-8076.live
-account-bitbank.com
-account-bltpannda.com
-account-btcc.com
-account-claim.com
 account-du-ae.icu
 account-expedia.com
 account-extraconftax.com
@@ -20931,7 +20799,6 @@ account-fanpage.com
 account-fluxbank.com
 account-flyway.com
 account-haixing.top
-account-helpdesk.top
 account-helps-desk.com
 account-id.support
 account-info.help
@@ -20948,20 +20815,16 @@ account-portal.live
 account-promotionidf.com
 account-pwm.com
 account-recovery.info
-account-security-noreplyaccountprotection.store
 account-securityaccountprotection.store
 account-server.com
 account-six-group.com
-account-supporting.help
 account-takeover.icu
 account-timocom.com
 account-updates-secure.online
 account-verification-poshmark.shop
 account-verification-vinted.shop
-account-verify-etsy.com
 account-verify-secure.work
 account-verifyitunes-store.com
-account-wallet-connect.com
 account-ws-greiner-test.ch
 account.anonymised.io
 account.esms.vn
@@ -21073,7 +20936,6 @@ acquirecardedsullen.com
 acquiredeceasedundress.com
 acquiretank.com
 acquisitionoffice.life
-acqwyqfecrlsh.online
 acr-br-prd.samsungcloud.tv
 acr-ca-prd.samsungcloud.tv
 acr-eu-prd.samsungcloud.tv
@@ -21087,7 +20949,6 @@ acridtwist.com
 acritoliters.com
 acrobatic-chest.pro
 acronym.com
-acropolitrento.com
 across.health
 acrosspf.com
 acrw08-cdn-settings.appsflyersdk.com
@@ -21278,7 +21139,6 @@ ad-plus.com.tr
 ad-prod.smytten.com
 ad-r.soulapp.cn
 ad-renderer-assets.ads.sportradar.com
-ad-ru-07.p.adserv.ai
 ad-ru.p.otm-r.com
 ad-scope.com.cn
 ad-score.com
@@ -21842,9 +21702,7 @@ adblockermax.com
 adblockeromega.com
 adblockerprofessional.com
 adblockfast.com
-adblockguard.net
 adblockplus.telemetry.eyeo.com
-adboischauffage.com
 adbooth.com
 adbot.tw
 adbottw.net
@@ -21949,7 +21807,6 @@ adde-ede33.web.app
 addealsnetwork.com
 addefend-platform.com
 addefend.com
-addelivery.net
 addeluxe.jp
 addencatal.rest
 addendo.network
@@ -21974,10 +21831,8 @@ addressability.zeustechnology.com
 addressangelaoccasional.com
 addresseepaper.com
 addressfriend.com
-addrevoice.cfd
 addroid.com
 addshoppers.com
-addstrap-ui.addshoppers.com
 addthisedge.com
 addy.expressen.se
 addynamix.com
@@ -22380,10 +22235,8 @@ adnz.co
 ado.icorp.ro
 ado.pro-market.net
 adobe-analytics-dc.belastingdienst.nl
-adobe-creative-cloud-free.com
 adobe-metrics.amegybank.com
 adobe-reader-acrobat.ru
-adobe-reader.online
 adobe-sync.dotomi.com
 adobe.adhaven.com
 adobe.demdex.net
@@ -22694,7 +22547,6 @@ ads-ext.cmmrcl.ly
 ads-g.juicyads.com
 ads-game-configuration-master.ads.prd.ie.internal.unity3d.com
 ads-gateway.sf-insights.io
-ads-google.ir
 ads-google.sbs
 ads-igmn.adhese.com
 ads-image.production-public.tubi.io
@@ -24881,6 +24733,7 @@ age-verification.info
 ageas.gbqofs.io
 agefiph-urssaf.fr
 agence-lion-dor-tiktok-live-agency-france.com
+agencone.digital
 agency2.ru
 agency360.io
 agencyrearrangepasture.com
@@ -25153,7 +25006,6 @@ airdrop-biofoundation.com
 airdrop-hyperbitcoin.com
 airdrop-pendle.app
 airdropwlfi.live
-airesslots.com
 airexpressdeliverycompany.pro
 airforce1-nike.fr
 airfreitdeliveryservice1.online
@@ -25920,7 +25772,6 @@ aml.valuecommerce.com
 amlbot-report.com
 amlbot-web3.cc
 amlcheck.bond
-amlchecken.com
 amlcheker.info
 amlers.inapps.appsflyersdk.com
 amligm.cdn-settings.appsflyersdk.com
@@ -28903,6 +28754,7 @@ apex.go.sonobi.com
 apex.smokerfiascos.cyou
 apexbricksfactory.in.net
 apexorcapital.cfd
+apexresolvefix.com
 apexspirekaryn.com
 apextraderltd.com
 apextwo.com
@@ -29863,7 +29715,6 @@ app-fra04-origin.spectrum.hsadspixel.net
 app-fra04-origin.spectrum.hscollectedforms.net
 app-fra04-origin.spectrum.hubspotfeedback.com
 app-goal.com
-app-goldfishgold.net
 app-hack.com
 app-log-oversea.immomo.com
 app-markets.xyz
@@ -30479,7 +30330,6 @@ argantalcs.com
 argencorba.rest
 argent-reel-casino.fr
 argent-zilo-tech.com
-argentum-global.com
 arglingpistole.com
 argos.citrusad.com
 argos.demdex.net
@@ -30941,7 +30791,6 @@ assetsprocurement.live
 assetstraces.us
 assgsscgfsfaw.website
 assignlabor.com
-assinaturacheque.digital
 assiocharg.rest
 assist.247-inc.net
 assistancerelay.com
@@ -31251,7 +31100,6 @@ attsmarthome.quantummetric.com
 attvip.mx
 atualizacaodecadastro.digital
 atualizacaodedispositivo.digital
-atualizacaouser.digital
 atv-tr.2cnt.net
 atwfblldwrizy.site
 atwi.pl
@@ -31787,7 +31635,6 @@ axf8.net
 axgbr.com
 axhapcocmb.com
 axhkkigc.com
-axi-0x.com
 axineswelled.cfd
 axiomacordis-tech.com
 axiomarbleless.pro
@@ -32999,7 +32846,6 @@ bayshorline.com
 bayside.logs.roku.com
 bayt-properties.com
 baz.demdex.net
-bazaarbaza.live
 bazr.ru
 bb-client-new.ap-southeast-1.log.aliyuncs.com
 bb-client-new.log-global.aliyuncs.com
@@ -33612,7 +33458,6 @@ bento.agoda.com
 benzeinlune.com
 beonlineboo.com
 beop.io
-bep-20.live
 bep2vf.cdn-settings.appsflyersdk.com
 bepolite.eu
 ber2zu-cdn-settings.appsflyersdk.com
@@ -33803,7 +33648,6 @@ betr-for-tod.com
 betriebsrat-i-live.com
 betriot-fr.fr
 betriotcasinofrance.fr
-bets10tr.vip
 betsafe.lt
 betsonsport.ru
 betssoncasino.fr
@@ -35225,7 +35069,6 @@ blockspins.fr
 blockspinscasino.fr
 blockstreamdesktop.store
 blockstreetupdate.live
-blocksync.live
 blocksync.pro
 blog-koukoku.com
 blog.fontanka.ru
@@ -35406,7 +35249,6 @@ bn4sph-skadsdkless.appsflyersdk.com
 bn7qjv-cdn-settings.appsflyersdk.com
 bnajcf-inapps.appsflyersdk.com
 bnajcf-launches.appsflyersdk.com
-bnbramadanlotary.com
 bncloudfl.com
 bneadoptiondev.112.2o7.net
 bned.demdex.net
@@ -35748,7 +35590,6 @@ boyfriendmeaningless.com
 boyuan-cdn.relevant-digital.com
 bozei.bid
 bozei.club
-bozei.space
 bozpoffice.online
 bozpoffice.sk
 bp.adkmob.com
@@ -35857,6 +35698,7 @@ brainbux.com
 braincash.com
 brainient.com
 brainlyads.com
+brainradar.click
 brainsland.com
 brainybasin.com
 brainynut.com
@@ -37963,14 +37805,10 @@ casibom7978.com
 casibom8009.com
 casibom8685.com
 casibom8816.com
-casibom8818.com
-casibom8819.com
 casibom8857.com
 casibom8911.com
 casibom8913.com
 casibom8931.com
-casibom8935.com
-casibom90002.com
 casibom90019.com
 casibom90712.com
 casibom90721.com
@@ -37979,7 +37817,6 @@ casibom92454.com
 casibom94255.com
 casibomagirisimiz.com
 casibomun-resmiadresi.com
-casiguncel-adreslerii.com
 casino-15euro-ohne-einzahlung.com
 casino-ad-mediation.me2zengame.com
 casino-bonus-ohne-einzahlung-2026-neu.com
@@ -39628,6 +39465,7 @@ celerysensationfact.com
 celeste-dyxo-engine.com
 celestialquasar.com
 celestialspectra.com
+celibratrade93.com
 celit.xyz
 cell.eu.nr-data.net
 cell.nr-data.net
@@ -40458,12 +40296,10 @@ claim-blockdagnetwork.pro
 claim-buttcoin.money
 claim-cure.com
 claim-maneki.com
-claim-penguinonsol.com
 claim-zerofees.com
 claimbridgelawoffice.com
 claimbridgelawoffice.org
 claimedhawserborty.cfd
-claimhuddle-network.live
 claimlist.live
 claimrocafi.net
 claims-megaeth.com
@@ -40542,11 +40378,9 @@ clawdbot-live.com
 clawdbotsatg.click
 clawdevent.com
 clawdoatg.app
-clawmode.pro
 clawnchchecker.com
 clawrot.app
 claws.meme
-clawtrencher.com
 clb.yahoo.co.jp
 clbanners9.com
 clbjmp.com
@@ -41463,7 +41297,6 @@ coinbaseserviceteam.com
 coinblast.network
 coincasso.com
 coincasso.io
-coinchief-login.com
 coincoverinternational.com
 coinectra-solution.com
 coinedexpro-app.com
@@ -42137,13 +41970,12 @@ com-disconetwork-prod1.collector.snplow.net
 com-dream11.com
 com-elonmusk-x.digital
 com-evvnt-prod1.collector.snplow.net
-com-exchange-crypto.com
 com-fourthline-prod1.collector.snplow.net
 com-gift.club
 com-hellosimply-prod1.collector.snplow.net
 com-indeed-prod1.collector.snplow.net
+com-la.live
 com-landrover.netmng.com
-com-ledger-wallet-download.com
 com-ltk-prod1.collector.snplow.net
 com-marketwise-prod1.collector.snplow.net
 com-memberdeals.netmng.com
@@ -42240,6 +42072,7 @@ community.advertising.microsoft.com
 community.bingads.microsoft.com
 community.noozhawk.com
 community.richlandsource.com
+communitydevitem.shop
 communitylearningcenter.org
 communitymetaverse.space
 communityworkday.demdex.net
@@ -42579,6 +42412,7 @@ contadores.miarroba.es
 contadorvisitasgratis.com
 contadorweb.com
 contagionsocketwilliam.com
+contagiousembodimentstoop.com
 container.pepperjam.com
 containers.dsp.solta.io
 containers.piwik.pro
@@ -42856,7 +42690,6 @@ copycarpenter.com
 copyerror.com
 copyfranchise.com
 copypasteproject.com
-coqinu.net
 cor-interluebke.de
 coral.prod.diks.fi
 coraldex.io
@@ -43744,7 +43577,6 @@ crypto-dsf-us.allawnos.com
 crypto-engineapp.com
 crypto-explodeai.com
 crypto-genius-site.com
-crypto-holdings.org
 crypto-klutz-engine.com
 crypto-loot.com
 crypto-loot.org
@@ -46255,7 +46087,6 @@ deepikarai.com
 deepintent.com
 deepmetrix.com
 deepnewsjuly.com
-deepnitch.app
 deepsathegoh.com
 deepskillup.pro
 deepsnitchal.com
@@ -47215,6 +47046,15 @@ dis.as.criteo.com
 dis.criteo.com
 dis.eu.criteo.com
 dis.us.criteo.com
+disable-alpinebank.com
+disable-bancfirst.com
+disable-bankofcommerceandtrust.com
+disable-cbna.com
+disable-ffcbbusinessolb.com
+disable-outfirstfed.com
+disable-ssbscott.com
+disable-tbonlinebanking.com
+disable-texascapitalbank.com
 disabsolle.rest
 disacsedim.rest
 disappearinghew.com
@@ -47805,6 +47645,7 @@ doreinvexus-software.com
 dorivo-app.com
 dornatrixel-system.com
 dornrusky.com
+doronbc.org
 doroncreations.com
 dortalon.net
 dortoordainsain.net
@@ -48004,7 +47845,6 @@ dragonblogger.com
 dragstergibletshaded.com
 drainomnipotentbeseech.com
 drainpaste.com
-drakefate.com
 drakeweks.com
 dramagrati.rest
 dramaticdirection.com
@@ -50203,7 +50043,6 @@ elgvhc-skadsdk.appsflyersdk.com
 elgvhc-skadsdkless.appsflyersdk.com
 eliafamilyoffice.com
 eligibility-hyperswap.exchange
-eligibility-polymarket.com
 eligibility.wootric.com
 eligible-bonkcoin.live
 elijahpies.com.sg
@@ -50865,6 +50704,7 @@ ereswpwkgjmff.website
 erfflaqb.com
 ergadx.com
 ergebnis-dienst.de
+ergergreefegrher.biz
 ergoofficechair.net
 ergoofficelab.com
 ergosites.com
@@ -51092,8 +50932,6 @@ etherovantium.org
 etherylcasino.fr
 ethgasfondetion.net
 ethgasfounbation.com
-ethgesfondation.net
-ethglobalweb.com
 ethical-simple.com
 ethicalads.io
 ethnicchristmassocks.com
@@ -54378,6 +54216,7 @@ flairads.rtb-useast.ak-is2.net
 flairads.xml.ak-is2.net
 flairadscpc.com
 flairmaxmtm5703.live-website.com
+flamboyanthopefully.com
 flameordinaryhonours.com
 flamtrexgen-platform.com
 flamtyr.com
@@ -54402,6 +54241,7 @@ flat-ads.com
 flatjeep.com
 flatrate.dk
 flavordig.pl
+flaxworth.org
 flbk2.izooto.com
 fldes6fq.de
 fldt.afafb.com
@@ -54766,6 +54606,7 @@ forensicstagger.com
 foresee.com
 foreseeresults.com
 forestflameq.cfd
+forestofsilverlight.com
 forestreveal.com
 forevergears.com
 forexclub.ru
@@ -54822,7 +54663,6 @@ fortinet.demdex.net
 fortissio.com
 fortnox.containers.piwik.pro
 fortnox.piwik.pro
-fortplay.info
 fortpush.com
 fortrade.com
 fortressprivateoffice.org
@@ -55454,7 +55294,6 @@ fumiercrapper.com
 fun-bet-casino.fr
 fun-e-cards.com
 fun-livestream.fun
-fun-stream.fun
 fun88.com
 fun9.net
 funbfuec.me.stape.io
@@ -55862,9 +55701,7 @@ gaixmgkhmdlbw.website
 gaj75.veve.com
 gak.webtoons.com
 gakewex.com
-gala-mobil-giris.com
 gala.met.vgwort.de
-galabett1055.com
 galaksion.com
 galala.ru
 galaxiemedia.fr
@@ -56583,7 +56420,6 @@ getnapa.com
 getnaughty.com
 getnodejs.com
 getove.com
-getpilant.pro
 getprofilematch.com
 getpush.net
 getredditbase.info
@@ -57445,6 +57281,7 @@ goldgain.use.svr.rixengine.com
 goldingvault.com
 goldlayer-api.prod.gbads.net
 goldspotmedia.com
+goldstat.cc
 goldstreamcapitalsystem.com
 goleman.me
 golfcartlaws.com
@@ -57636,7 +57473,6 @@ govinter.com
 govisibl.com
 govisibl.io
 govmetric.com
-govmyclaimpro.info
 govweraml.com
 gowarapex-tech.com
 gowkitinsular.cfd
@@ -57677,6 +57513,7 @@ gpnbuf-cdn-settings.appsflyersdk.com
 gpnbuf-launches.appsflyersdk.com
 gpncc5.cdn-settings.appsflyersdk.com
 gpncc5.launches.appsflyersdk.com
+gpntkngnqg2jpmoz22y.cfd
 gpp.netpub.media
 gpr.hu
 gpsecureads.com
@@ -57898,7 +57735,6 @@ grogood.com
 grograngol.com
 groinfont.com
 grokiuscoin.digital
-grokiusdrop.live
 grokiusofficial.xyz
 grokiustoken.lat
 grokoffice.net
@@ -59205,6 +59041,8 @@ hemopovipa.rest
 hemorrdroids.net
 hems.signal-prd.s-onetag.com
 hemsync.clickagy.com
+hengelermuellera.com
+hengelermuellerc.com
 henghost.com
 henordemouraoffice.com
 henrypp.org
@@ -59669,6 +59507,7 @@ hogtiesturret.com
 hogyardkerasin.com
 hoidulich.com
 hoirms.com
+hoj-investgard.com
 hojdfinoryx.com
 hojinvestgard.net
 hoknyllyxevcl.online
@@ -60159,7 +59998,6 @@ huashiaspire.com
 huatuo.qq.com
 huaweicloudapis.com
 huaxiang.eastmoney.com
-hub-exodus.com
 hub-jupuary.com
 hub-plan-log-1.log-global.aliyuncs.com
 hub-servicesemployee.info
@@ -62806,7 +62644,6 @@ intrigueoffice.online
 introjava.com
 intrudeimpolitetortoise.com
 intrustedzone.site
-intuition-protocol.net
 intuition-protocol.xyz
 intuitproductiono3k66avm.analytics.org.coveo.com
 intwinebespit.cyou
@@ -63124,6 +62961,7 @@ ir0d0r1.jp
 ir9w9rnjts2suwm2vwvany3qnv0b91770327615.nuid.imrworldwide.com
 ir9zn58s36w9k0a0bgh99odzjytca1763047368.uaid.nmrodam.com
 iranbar.org
+irank.sbs
 iratestoutshut.shop
 irbit-live.ru
 irbyvtdndgcnndzggqn6xyyxad75w1771866760.nuid.nmrodam.com
@@ -63897,6 +63735,7 @@ jellabaegestswuther.cfd
 jelly-v6.mdhv.io
 jelly.mdhv.io
 jellybean.lat
+jellybeanmeme.xyz
 jellycounter.com
 jellyfinstream.com
 jendelakarawang.net
@@ -64751,14 +64590,11 @@ junplatdirect.com
 junyx9.ru
 jup-dex.org
 jup9.com
-jupiter-earning.com
 jupiter-nexus.app
 jupiter.intl.sys.miui.com
 jupiter.rus.sys.miui.com
 jupiter.sys.miui.com
 juponrerope.com
-jups.pro
-juptrade-sol.net
 juqzuljruojt.com
 jurisoffice.com.br
 jurosxyro-platform.com
@@ -65135,6 +64971,7 @@ kannotaxoffice.com
 kanoodle.com
 kanpaku.jp
 kantartns.lt
+kanzlei-ra.net
 kaolinoleous.com
 kaoqvz-cdn-settings.appsflyersdk.com
 kaowex.com
@@ -66035,7 +65872,6 @@ krimhilde-2.cfd
 krimhilde-3.cfd
 krimhilde-4.cfd
 kringrdrct.com
-kriptozeka.com
 krishisanskriti.org
 krishnaw249.alphonso.tv
 krishnaw252.alphonso.tv
@@ -66340,7 +66176,6 @@ kv41fw-launches.appsflyersdk.com
 kv8etw-cdn-settings.appsflyersdk.com
 kv8etw-launches.appsflyersdk.com
 kv9g3yl4c3nqn3rdv32w72wwf2sf01771371000.uaid.nmrodam.com
-kvadorum.icu
 kvadorum.live
 kvaedit.site
 kvazfz9bjdpuum3wdpgadrwvtrj6r1767811641.nuid.nmrodam.com
@@ -66412,6 +66247,7 @@ kxsauwadjoy.com
 kxxhowbxlcwij.online
 ky.bifilarwhammo.com
 ky595images.com
+kybcoin.com
 kyc-2f-ledger.com
 kyc-basewallet.com
 kycfwg.cdn-settings.appsflyersdk.com
@@ -67169,6 +67005,7 @@ leanlab.co
 leap.intermesh.net
 leaplunchroom.com
 learn.martiallawmuseum.ph
+learnbitcoin.live
 learning.hmhco.com
 learninglab.about.ads.microsoft.com
 learninglab.ads.microsoft.com
@@ -67200,8 +67037,6 @@ ledgerqfs.com
 ledgerupdateweb3.com
 ledgerwalletdevice.com
 ledgixedge-system.com
-ledgrlive.live
-ledlive.live
 lee.blueconic.net
 lee2code.com
 leechpremium.link
@@ -67705,6 +67540,7 @@ lin-d.openx.net
 lin01.bid
 lin02.bid
 lincare.piwik.pro
+lincoln24.biz
 lindychat.com
 line1-log.biligame.net
 line3-adscore-api.biligame.net
@@ -67837,7 +67673,6 @@ lisbonsalesoffice.com
 lisource.panel.kantartns.lt
 lispnegligent.com
 list-blogger.fun
-list-mexc.fun
 list.wallpaper.cloud.duba.net
 list.z.qingting.fm
 listadata.com
@@ -69298,7 +69133,6 @@ losslace.com
 lost-support-live.help
 losung-schnell.com
 lot.luck-fortune.com
-lotexplay.com
 lotstmichadelivery.info
 lotteryadda.com
 lotterybloguk.com
@@ -70055,6 +69889,7 @@ mackeeperapp.mackeeper.com
 macoms.la
 macrlisubnet.com
 macro.adnami.io
+macrodemon.net
 macsecurity.net
 macsoftwarez.com
 macstatic.webtrekk.com
@@ -70079,6 +69914,7 @@ made-in-tunisia.net
 madeleineeditions.com
 madelivery.co.uk
 madeupice.com
+madeupphysical.pro
 madeupvigourpoll.com
 madhouse.cn
 madi8xs2tx09xcmjpkkhxlwaq301s1769854087.nuid.nmrodam.com
@@ -70130,7 +69966,6 @@ magicallyitalian.com
 magicalspinfr.fr
 magicanimations.fr
 magiccandles.eu
-magicedenwallets.app
 magicianmost.com
 magicofis.com
 magicsoninlaw.com
@@ -70227,6 +70062,7 @@ mainting-minues.xyz
 maio.jp
 mairiedebeaubray.fr
 maisdelivery.app
+maison-dartois.co
 maisondunand.com
 maist.jp
 maithigloab.net
@@ -70269,6 +70105,7 @@ malmberg.piwik.pro
 malmtufted.cyou
 malocacomals.com
 malog.byapps.co.kr
+maluszekswiat.shop
 malwarecrusher.com
 malwareprotectionlive.com
 mam.netease.com
@@ -70397,6 +70234,7 @@ markappmedia.site
 markedoneofth.com
 market-click-baobab.yandex.ru
 market-global.smrtb.com
+market-ondo.finance
 market-ondo.net
 marketer.lv
 marketer.monetate.net
@@ -70479,7 +70317,6 @@ mars.jd.com
 marsads.com
 marsbahis-girisimiz.com
 marsbahis-twitter.vip
-marsbahisi-giris.com
 marsgirisadresi2026.com
 marshalcurve.com
 marshyfarsightedharmony.com
@@ -71327,7 +71164,6 @@ matomo.swapcard.com
 matomo.systemhaus.com
 matomo.szarchiv.de
 matomo.tabakland.de
-matomo.tabrizu.ac.ir
 matomo.talisa.com
 matomo.tapin.ir
 matomo.tarnkappe.info
@@ -72923,7 +72759,6 @@ meu.stape.io
 meuhelper.online
 meuvivoempresas.com.br
 meware.demdex.net
-mewgenics.app
 mex-live.com
 mexeh35i8z739cbomyocxdav55hal1761598162.uaid.nmrodam.com
 mexico.4life.com
@@ -73167,7 +73002,6 @@ mignonsniper.com
 migrate-reef.app
 migrate-wojak.live
 migrateoctant.app
-migratesolgenic.live
 migrationannarequested.com
 migrationoctavian.com
 migrosbank.online
@@ -73247,6 +73081,7 @@ mindtake.com
 mineco.ent.et-gv.fr
 miner-arupsp.swoopanalytics.com
 miner-sage-sp.swoopanalytics.com
+mineralt.io
 mineresper.rest
 minergate.com
 minero.cc
@@ -74020,6 +73855,7 @@ monstertaskvabackoffice.info
 monsterwins-casino.fr
 monstrousattempt.com
 monsy.com
+mont-investeau.com
 montacompl.rest
 montangop.top
 montataeni.rest
@@ -74060,7 +73896,6 @@ moonshot-listed.com
 moonshot-lists.com
 moontrkr.com
 moonvote-x.fun
-moonvotein.fun
 moorshoes.com
 moose.eldorado.gg
 mootermedia.com
@@ -74082,6 +73917,7 @@ mores.mosspf.net
 mores.toponad.com
 morevisits.info
 morfbrs.sbs
+morfometal.com
 morganstanley.demdex.net
 morgenpost.liveticker.comon.ergebnis-dienst.de
 moricasino2.run
@@ -74585,7 +74421,6 @@ muermoabject.shop
 muf.app-ads-services.com
 muffinsum.com
 muffireny.rest
-mufuum.com
 mug.criteo.com
 mugen-online.com
 mugglesskyfte.com
@@ -74618,6 +74453,7 @@ multiprotocoltoken.pro
 multiservice.guangzhuiyuan.com
 multispaces.net
 multispacesext.net
+multiswaps.icu
 multitrim.shop
 multiupload.com
 multiview.122.2o7.net
@@ -74987,6 +74823,7 @@ mysiren.ru
 mysite.webroot.com
 mysmbkoapuust.website
 myspybot.com
+mystake.life
 mystakefr.fr
 mystart.incredibar.com
 mystat-in.net
@@ -76097,7 +75934,6 @@ niko-3.cfd
 niko-4.cfd
 nilc9f-adrevenue.appsflyersdk.com
 nilc9f-launches.appsflyersdk.com
-nillionmigrate.info
 nimble-tear.pro
 nimblebird.co
 nimbleboilerdived.com
@@ -76555,6 +76391,7 @@ nostemedia.bbvms.com
 not.lat
 notaryooffice.top
 notdewbeam.cyou
+notdivided.lat
 notecanyon.com
 noteeoffice.top
 notelayingtowers.com
@@ -79067,7 +78904,6 @@ origunix.com
 orimq5apvq3aidelmg9ualtuxsupi1771774851.darnuid.imrworldwide.com
 orion.iad.appboy.com
 orionsventure.cfd
-orisbetgunceladresler1.com
 oritooep.win
 orivionyx.info
 orixon.org
@@ -80339,7 +80175,6 @@ pavoshare.com
 pawgleamed.com
 pawilonyrosa-sp.com
 paxamedia-d.openx.net
-paxg-coin.com
 paxlfy-eu.com
 pay-accounkeken.com
 pay-click.ru
@@ -81215,7 +81050,6 @@ pipidroods.com
 pipl56.launches.appsflyersdk.com
 pippid.inapps.appsflyersdk.com
 pippid.launches.appsflyersdk.com
-pippin.news
 pippincoin.net
 pippincoinsol.com
 pippins.app
@@ -81223,7 +81057,6 @@ pippinscoin.com
 pippinstoken.com
 pippintokensol.com
 pippio.com
-pippkln.fun
 pips.lordoftheentertainingostriches.com
 pips.taboola.com
 pipumvjwcm1.alphonso.tv
@@ -82662,7 +82495,6 @@ pointmediatracker.com
 pointroll.com
 points2shop.com
 poisedrope.com
-poisk-svo.com
 pok.mintegral.net
 pokdtetqhifzs.website
 poker-bet.com
@@ -82719,6 +82551,7 @@ polinexis-app.com
 polinexis-pro.com
 polinexis.info
 polinexpro-app.com
+polished-hook.com
 polishedfolly.com
 polishleadennineteen.com
 polisnetwork.io
@@ -82874,7 +82707,6 @@ portainer-ce.matomo.cloud
 portal--7c6d1a0359-content.sbs
 portal-dotimehomeoffice.site
 portal-external.vi.aws.fwmrm.net
-portal-inkfnd.com
 portal-ledger.io
 portal-lightspeed.com
 portal-lightspeed.vip
@@ -83288,7 +83120,6 @@ predictionds.com
 predictivadnetwork.com
 predictivdisplay.com
 predictiveresponse.net
-predictnow.live
 predinorma.com
 prednisone10mg.us.com
 predominantbrutallyscissors.com
@@ -83459,7 +83290,6 @@ prisesdemode.com
 prisma.nexx360.io
 prismamedia.gscontxt.net
 prismeanalytics.com
-prismstake.com
 pristine-departure.com
 pristinegale.com
 priv-policy.imrworldwide.com
@@ -83505,7 +83335,6 @@ privatproxy-endpoint.xyz
 privatproxy-schnellvpn.xyz
 privcoin.io
 privecasino-fr.fr
-privnqte.com
 privymktg.com
 priyafoods.com
 prize-pump.fun
@@ -83837,7 +83666,6 @@ promo.yahoo.com
 promoadsense.com
 promobenef.com
 promoblocks.ru
-promocao-mounjaro.com
 promocionesweb.com
 promogonsa.com
 promolayer.io
@@ -83868,7 +83696,6 @@ prompt-herplex-2u.com
 prompt-levorapro-solution.com
 promptcdn.com
 promptsgod.com
-prompump.fun
 promuautoi.rest
 pronetadvertising.com
 pronexzola.net
@@ -83899,7 +83726,6 @@ propolandhub88x.xyz
 propolandincome7.xyz
 propolskafunds2x.info
 propoparal.rest
-proposal-ethereal.trade
 proposal-incentiv.net
 proposal-onre.xyz
 proposal-pendle.xyz
@@ -84466,7 +84292,6 @@ pulse.jpush.cn
 pulse.toyota.com
 pulse360.com
 pulseadnetwork.com
-pulsechainpeacock.live
 pulseclinkerless.top
 pulsedendent.qpon
 pulsemaps.com
@@ -84497,7 +84322,6 @@ pump-refunded.fun
 pump-return.fun
 pump-vault.fun
 pumpfuncoin.digital
-pumpfunsnipbot.com
 pumpswap.life
 punch-p2p.play.aiseet.atianqi.com
 punch-p2p.play.t002.ottcn.com
@@ -84657,7 +84481,6 @@ pussemptier.cyou
 pussycash.com
 pustoty.net
 pusula-guncel2026.vip
-pusulabel1074.com
 putchumt.com
 putrefypreparedmadman.com
 putrr7.com
@@ -84880,7 +84703,6 @@ pya4jk.skadsdk.appsflyersdk.com
 pya4jk.skadsdkless.appsflyersdk.com
 pyaemicclept.shop
 pybmulveaz.com
-pyedexch.com
 pyehlunewp.com
 pyfji5-cdn-settings.appsflyersdk.com
 pyfji5-gcdsdk.appsflyersdk.com
@@ -85402,7 +85224,6 @@ qmia2b.onelink.appsflyersdk.com
 qmixurvclefru.online
 qmjanm5tyrkdc0wyunwaf0t5yetvg1766510361.nuid.imrworldwide.com
 qmpdwkf.pa-cd.com
-qms-ai.net
 qmsdk.shouji.sogou.com
 qmw058xioffopll3ddtueeatdfdiw1769541645.nuid.imrworldwide.com
 qmxvcjravsxyu.online
@@ -85485,7 +85306,6 @@ qr7wn1-inapps.appsflyersdk.com
 qr7wn1-launches.appsflyersdk.com
 qrakmgldyqvrr.website
 qrandpasha-giris.com
-qrandpasha-girisi.com
 qrandpasha-qiris.com
 qrandpashagiris.com
 qrapi.play.aiseet.atianqi.com
@@ -85530,6 +85350,7 @@ qteiyv-launches.appsflyersdk.com
 qteiyv.cdn-settings.appsflyersdk.com
 qteiyv.launches.appsflyersdk.com
 qthiybhs3pzwv4zmqi7u3uwjogvjj1771443986.nuid.imrworldwide.com
+qtk9378rlpcn6xgpf.cfd
 qtlpjjdflbdli.site
 qtobcf-cdn-settings.appsflyersdk.com
 qtobcf-inapps.appsflyersdk.com
@@ -89447,7 +89268,6 @@ ralodithas.com
 ralph-lauren-pas-cher.fr
 ralphlaurenoutletnederland.com
 ralt.site
-ramadanlotary.com
 ramadanlotarybnb.com
 rambla.be
 rameoz.cdn-settings.appsflyersdk.com
@@ -91090,7 +90910,6 @@ robot-delivery.top
 robotbagpipe.com
 robotflowermobile.com
 robotreplay.com
-robumax.live
 robustpsychology.com
 robux.com.ua
 robux.life
@@ -91246,7 +91065,6 @@ rose.pubmatic.com
 rosemontoffices.com
 rosenberg.appmetrica.yandex.net
 rosetta.richmediastudio.com
-rosewoodlaminates.com
 rossmenn.pl
 rostraffic.com
 rostveldig.top
@@ -91304,6 +91122,7 @@ rowaskewoblong.com
 rowlandpodogyn.shop
 rox-media4.com
 roxcasino.com
+roxgg.com
 roxot-panel.com
 roxr.net
 roy-union.com
@@ -93093,7 +92912,6 @@ salbraddrepilly.com
 saldanha.top
 sale-id18264834.info
 sale-id445211.info
-sale-id6284729.info
 sale-smyk.com
 salecycle.com
 salekxvjerzxc.site
@@ -93298,7 +93116,6 @@ sarktur.com
 sarodesdonnot.com
 sarov.ws
 sartorelli.pro
-sarubet.com
 sarvexid-app.net
 sas5huyoim.kameleoon.io
 sasada-lawoffice.com
@@ -93558,6 +93375,7 @@ scapi.telemetry.broadcom.com.cdn.cloudflare.net
 scappassot.rest
 scar-shared.unityads.unity3d.com
 scar.unityads.unity3d.com
+scarce-award.pro
 scarcehepatitis.com
 scarcesign.com
 scarcverse.rest
@@ -94101,7 +93919,6 @@ searchinquire.com
 searchlnk.ru
 searchmagnified.com
 searchmarketing.com
-searchmarquis.com
 searchmaven.co
 searchmiracle.com
 searchnews-drru.dt.dbankcloud.ru
@@ -94993,7 +94810,6 @@ set-prime.fr
 setapp.ink
 setbeat.com
 setcarinsurance.com
-setfex.com
 sethizlitornavida.xyz
 sethmichaeldonsky.com
 setizeltas.xyz
@@ -96202,7 +96018,6 @@ simpleswap.to
 simpletexting.com
 simpletraffic.co
 simplewebanalysis.com
-simplewebs.pro
 simpli.fi
 simplifi.partners.tremorhub.com
 simply-live-consciously.com
@@ -96688,15 +96503,6 @@ sloanbajardo.cfd
 sloffer1.com
 slog.gentechsolution.com
 slog.trackingio.com
-slon-1.net
-slon-2.com
-slon-2.net
-slon-3.com
-slon-3.net
-slon-4.com
-slon-4.net
-slon-5.com
-slon-5.net
 slon1-at.net
 slon1-cc.com
 slon1.net
@@ -96710,50 +96516,37 @@ slon2-at.com
 slon2-at.net
 slon2-cc.com
 slon2-to.com
-slon2-to.net
 slon2.run
 slon2at.com
 slon2at.net
 slon2cc.net
-slon2to.com
 slon3-at.com
 slon3-at.net
 slon3-cc.com
-slon3-to.com
-slon3-to.net
 slon3at.com
 slon3at.net
 slon3cc.net
-slon3to.com
 slon4-at.com
 slon4-cc.com
-slon4-to.com
-slon4-to.net
 slon4at.com
 slon4cc.com
 slon4cc.net
 slon4to.com
 slon5-at.com
 slon5-cc.com
-slon5-to.com
-slon5-to.net
 slon5at.net
 slon5cc.com
 slon5cc.net
-slon5to.com
 slon6-at.com
 slon6-at.net
 slon6at.com
 slon6cc.net
-slon6to.com
 slon7-at.net
 slon7-cc.com
 slon7at.com
 slon7at.net
 slon7cc.com
 slon7cc.net
-slon7to.com
-slon7to.net
 slon8-at.com
 slon8-at.net
 slon8at.com
@@ -96764,7 +96557,6 @@ slon9at.com
 slon9at.net
 slon9cc.com
 slon9cc.net
-slone2.net
 slonik.ria.com
 slonl.com
 slosoverf.rest
@@ -98111,7 +97903,6 @@ soggy-surround.com
 soggysponge.com
 soglkuki.prolexgroup.ru
 sogropidy.com
-sohobetgunceladresler1.com
 soicos.com
 soirlcsan.com
 sojawurst.plus.rtl.de
@@ -98190,7 +97981,6 @@ solpulse.dev
 solpulse.info
 solpulse.life
 solpulse.ltd
-sols-lunacreator.com
 solseker.org
 solsofi.com
 solstake.win
@@ -98585,7 +98375,6 @@ spin83qr.com
 spinandwin.casino
 spinanga-fr.fr
 spinania.com
-spinania.pro
 spinascana.rest
 spinaud.live
 spincash88.cash
@@ -99520,7 +99309,6 @@ stakeca.com
 stakefr.fr
 stakeitaly.cdn.netrefer.com
 stakeschips.com
-stakeslots.bet
 staking-bdagscan.com
 staking-zamo.store
 stakingbasket.com
@@ -99530,7 +99318,6 @@ stallsobservance.com
 stalyusporin.com
 staminads.com
 stamps.hrzn-nxt.com
-stampsoffers.com
 stan.xing.com
 stanchartafrica.demdex.net
 stanchartindia.demdex.net
@@ -99538,7 +99325,6 @@ stancharttw.demdex.net
 standartnews.eu
 standchartbank.demdex.net
 standout-cdn.kargo.com
-standx.life
 stanfordhealthcare.org.102.122.2o7.net
 stanleystella.piwik.pro
 stape.alura.com.br
@@ -99679,7 +99465,6 @@ stat.media
 stat.meitudata.com
 stat.microvirt.com
 stat.moji.com
-stat.mshdiau.ac.ir
 stat.mydaddy.cc
 stat.nate.com
 stat.nearme.com.cn
@@ -99801,7 +99586,6 @@ static.4wnetwork.com
 static.a-ads.com
 static.a.mts.ru
 static.accesstrade.vn
-static.accountkits.xyz
 static.adbrix.io
 static.adbutter.net
 static.adconnect.vn
@@ -100889,7 +100673,6 @@ strangeclocks.com
 strategicmedia-1-adswizz.attribution.adswizz.com
 strategicmedia-12-adswizz.attribution.adswizz.com
 strategicmedia-7-adswizz.attribution.adswizz.com
-strategy-btc.icu
 strategy-ledger.com
 strategy.shouji.360.cn
 strategycast.live
@@ -101159,6 +100942,7 @@ summarizer-media.advance.net
 summerhamster.com
 summerwaveadventures.com
 summitmedia-d.openx.net
+summitvalnex.com
 summonsrecarry.com
 sumo.ad
 sumo.com
@@ -101641,7 +101425,6 @@ sync.adotmob.com
 sync.adprime.com
 sync.ads.oveeo.com
 sync.ads.yieldmo.com
-sync.adsinteractive.com
 sync.adspend.space
 sync.adtech.ink
 sync.adtelligent.com
@@ -103855,7 +103638,6 @@ thebrighttag.com
 thebugs.ws
 thebuyersoffice.com
 thecakedeliveryco.com
-thecakewallet.com
 thecalokas.com
 thecas.xyz
 thecatmachine.com
@@ -105362,7 +105144,6 @@ toyota.demdex.net
 toyotaeurope.demdex.net
 toyotaeuropelexglobalprod.112.2o7.net
 toyotaeuropetoyglobalprod.112.2o7.net
-toys24.vip
 toythieves.com
 tp-cdn.com
 tp-em.cc
@@ -106236,7 +106017,6 @@ tractorridge-equipment.com
 tractorsupply.demdex.net
 tractorsupply.quantummetric.com
 tradbypass.com
-trade-goldfishgold.com
 trade-proair.com
 trade360.com
 tradebot.online
@@ -106733,7 +106513,6 @@ trumpcommunity.com
 trumpgorry.com
 trumpia.com
 trumpmobile.lat
-trunelo.com
 trunkpkg.com
 trunqbsp.com
 truoptik.com
@@ -106775,7 +106554,6 @@ trustutn.org
 trustwallet-report.com
 trustwalletalpha.app
 trustwalletbonus.app
-trustwalletcard.finance
 trustwalletcard.info
 trustwalletcheck.us
 trustwaudit.com
@@ -106789,7 +106567,6 @@ trutheyesstab.com
 truthful-general.com
 truthgate.us
 truthseekerdaily.pro
-truvoro.com
 trvdp.com
 trw2xasmrszrn7qwk.ay.delivery
 trwdip.online
@@ -107196,6 +106973,7 @@ tw5j0bad.moe.video
 twads.gg
 twart.myfirewall.org
 twc-assets.artsai.com
+twcards.pro
 twcmmk.com
 twcouponcenter.com
 twdc.blueconic.net
@@ -108551,7 +108329,6 @@ update0.aiclk.com
 update0.smart-soft.ru
 updateaccountidentity.click
 updatehuddle.live
-updatehuddlle.live
 updaterppl.live
 updaterputty.com
 updates-office.com
@@ -109918,9 +109695,11 @@ vailresorts.demdex.net
 vaimucuvikuwu.net
 vainanalyst.com
 vainews.cn
+vaisyabam.com
 vaitotoo.net
 vak345.com
 vakifbank.malliq-api.com
+val-fortunance.com
 val.atm.youku.com
 valassis.com
 valcup.icu
@@ -110276,7 +110055,6 @@ venture-365-inspired.com
 venueitemmagic.com
 venusformen.com
 venusrevival.com
-veocax.com
 veocq.essenzshop.at
 veorax.com
 veoxa.com
@@ -111254,7 +111032,6 @@ voila.love
 voip.akkord.com
 voisetech.com
 voisetech.rtb-useast-v4.ak-is2.net
-voisox.com
 vokpmgsfi48.alphonso.tv
 volandera.top
 volc.bj.ad.track.66mobi.com
@@ -111312,7 +111089,6 @@ vortex.hulu.com.akadns.net
 vortexdataserver1.mom
 vortexdataserver2.mom
 vortexdataserver3.mom
-vortexdataserver4.mom
 vortexdataserver5.mom
 vortexdepioyer.com
 vortexvalorengine.com
@@ -111328,6 +111104,7 @@ vote-eclipse.xyz
 vote-inkonchain.com
 vote-moonwell.finance
 votecoin-pump.fun
+voters-moonshot.org
 votes-kinetiq.events
 votes-usdai.com
 votes-usualx.com
@@ -111668,6 +111445,7 @@ vyo19w-inapps.appsflyersdk.com
 vyo19w-launches.appsflyersdk.com
 vypepega.com
 vysizjqwuwkpk.site
+vysok-kapitov.com
 vyworlds.com
 vywsoc.adrevenue.appsflyersdk.com
 vywsoc.launches.appsflyersdk.com
@@ -112020,7 +111798,6 @@ wallapop-pbs-nt.relevant-digital.com
 wallapop-pbs.relevant-digital.com
 wallarticles.com
 wallbed.co
-wallet-auth-tg.com
 wallet-checker.us
 wallet-sollare.com
 walletaudit.info
@@ -112050,7 +111827,6 @@ wantedbet.com
 wantmatures.com
 wanw1.com
 wao.atu.de
-waowux.com
 waowwgxqrxb.com
 wap-dl-v6.shouji.sogou.com
 wap.koudaitong.com
@@ -114062,10 +113838,8 @@ www.5starhdporn.com
 www.64786087.xyz
 www.6apps.net
 www.6llion.com
-www.75158a2d3025.info
 www.78587924.xyz
 www.7mb.nl
-www.7zip.com
 www.84302764.xyz
 www.888.com
 www.88p2p.com
@@ -115160,7 +114934,6 @@ www.scented-anxiety.com
 www.scotiabrnk.com
 www.scroeqzfeix.com
 www.scupio.net
-www.searchmarquis.com
 www.secure01-redirect.net
 www.sedoparking.com
 www.sefh.es
@@ -115945,7 +115718,6 @@ xclosez.cfd
 xclusivetouch.co.uk
 xcoinmarket.io
 xcommonsupdate.live
-xcomwallet.finance
 xconf.cauly.co.kr
 xcp.go.sonobi.com
 xcryptocoin.io
@@ -115997,7 +115769,6 @@ xengqsqm.com
 xengwalletpro.com
 xenodeus.ws
 xeotboikza.kameleoon.io
-xeraxium.icu
 xeraxium.live
 xerexoret.top
 xerjswstbipoi.com
@@ -116590,7 +116361,6 @@ xrpl-xaman.app
 xrplarmytoken.app
 xrplarmytoken.com
 xrplive-korea.com
-xrpwebca.com
 xrpwebseminar.com
 xrpwebseminarca.com
 xrpwebseminarnz.com
