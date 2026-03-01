@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Light",
+    "description": "Basic protection with near-zero false positives. Good for everyday family use.",
+    "lists": [
+      "hagezi-light",
+      "hagezi-apple"
+    ]
+  },
+  {
+    "name": "Recommended",
+    "description": "Solid middle ground. Blocks a wide variety of trackers, telemetry, malware, and ads without significantly breaking the modern web.",
+    "lists": [
+      "hagezi-pro",
+      "hagezi-apple",
+      "blocklistproject-tracking",
+      "blocklistproject-phishing"
+    ]
+  },
+  {
+    "name": "Extreme",
+    "description": "Maximum security. Blocks the most threats, malware, advanced tracking, and telemetry. May require manual whitelisting for some services.",
+    "lists": [
+      "hagezi-pro",
+      "hagezi-apple",
+      "blocklistproject-tracking",
+      "blocklistproject-malware",
+      "blocklistproject-phishing"
+    ]
+  }
+]

@@ -1,0 +1,100 @@
+# =============================================================================
+# Fetch Remote Blocklists — GitHub Actions CI/CD Pipeline
+# =============================================================================
+#
+# PURPOSE:
+#   Automatically downloads, validates, preprocesses, and commits fresh DNS
+#   blocklists from upstream sources. This workflow is the data pipeline that
+#   feeds the Cloudflare Worker's k-way merge API.
+#
+# TRIGGERS:
+#   - push (main only): Runs when blocklist config, scripts, tests, or workflow
+#     files change on the main branch. Feature branches are NOT included —
+#     use the separate ci.yml workflow for PR validation.
+#   - schedule: Runs daily at 04:00 UTC to pick up upstream list updates.
+#   - workflow_dispatch: Allows manual triggering from the GitHub UI.
+#
+# PIPELINE STAGES:
+#   1. Checkout the repository
+#   2. Run the test suite (skipped on scheduled cron runs to save CI minutes)
+#   3. Execute fetch-blocklists.sh to download and preprocess all lists
+#   4. Commit and push any changed blocklist files back to the repository
+#
+# PERMISSIONS:
+#   - contents: write — Required to push the updated blocklist commits
+#   - issues: write — Required by the bash script to auto-create GitHub Issues
+#
+# PRECONDITIONS:
+#   - blocklist_sources.json must be a valid JSON array of blocklist entries
+#   - The bash script (scripts/fetch-blocklists.sh) must be executable
+#   - GITHUB_TOKEN secret must be available for issue management
+#
+# POSTCONDITIONS:
+#   - On success: Updated _preprocessed_sorted.txt files are committed to main
+#   - On no changes: The workflow skips the commit step gracefully
+#   - On fetch failure: GitHub Issues are created/updated automatically
+# =============================================================================
+
+name: Fetch Remote Blocklists
+
+on:
+  push:
+    branches:
+      - main # Only run on main — feature branches use ci.yml for tests only
+    paths:
+      # If any of these files are changed, run the workflow
+      - "blocklist_sources.json"
+      - ".github/workflows/fetch-blocklists.yml"
+      - "tests/**"
+      - "scripts/**"
+      - "package.json"
+  schedule:
+    # Run every day at 04:00 UTC
+    - cron: "0 4 * * *"
+  workflow_dispatch: # Allow manual triggering
+
+permissions:
+  contents: write # Needed to push commits
+  issues: write # Needed to create issues on fetch failure
+
+jobs:
+  process-blocklists:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js for Unit Testing
+        if: github.event_name != 'schedule'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run Test Suite (Worker & Fetch Logic)
+        if: github.event_name != 'schedule'
+        run: npm test
+
+      - name: Fetch Blocklists from JSON
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Call the standalone fetch script
+          export CI="true"
+          ./scripts/fetch-blocklists.sh blocklist_sources.json blocklists
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add blocklists/
+
+          # Check if there are any changes to commit
+          if git diff --staged --quiet; then
+            echo "No blocklists have changed. Skipping commit."
+          else
+            echo "Changes detected. Committing and pushing..."
+            git commit -m "chore: update external blocklists"
+            git push
+          fi

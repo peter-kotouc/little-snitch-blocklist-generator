@@ -1,0 +1,56 @@
+# =============================================================================
+# CI — Pull Request Validation
+# =============================================================================
+#
+# PURPOSE:
+#   Runs the test suite on pull requests and feature branch pushes to validate
+#   code changes BEFORE they are merged into main. This workflow does NOT
+#   fetch blocklists or commit anything — it only runs tests.
+#
+# TRIGGERS:
+#   - pull_request: Runs on PRs targeting main
+#   - push (non-main): Runs on feature branch pushes when relevant files change
+#
+# PRECONDITIONS:
+#   - Node.js 20 must be available
+#   - npm test must exit 0 for the PR to pass
+#
+# POSTCONDITIONS:
+#   - On success: PR check passes (green checkmark)
+#   - On failure: PR check fails, blocking merge
+# =============================================================================
+
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches-ignore:
+      - main # main branch is handled by fetch-blocklists.yml
+    paths:
+      - "blocklist_sources.json"
+      - "functions/**"
+      - "scripts/**"
+      - "tests/**"
+      - "package.json"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Test Suite
+        run: npm test

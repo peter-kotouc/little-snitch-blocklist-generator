@@ -1,0 +1,16 @@
+{
+  "name": "little-snitch-blocklist-generator",
+  "version": "1.0.0",
+  "description": "Dynamic Cloudflare Pages generator of Little Snitch blocklists",
+  "main": "functions/api/blocklists.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "node --expose-gc --test --test-reporter=spec tests/*.test.js",
+    "build:cloudflare": "npm run test && rm -rf tests scripts .github package*.json README.md INSTRUCTIONS.txt"
+  },
+  "author": "Peter Kotouc",
+  "license": "MIT"
+}

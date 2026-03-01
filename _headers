@@ -1,0 +1,11 @@
+# Cloudflare Pages Global Headers
+# Applied to all routes served by Cloudflare Pages (static files + Functions API).
+#
+# X-Robots-Tag: Prevents search engines from indexing, following links, caching,
+#               or showing snippets from any page. This is a data API, not a website.
+# X-Content-Type-Options: Prevents browsers from MIME-sniffing the response away
+#                         from the declared Content-Type, mitigating XSS vectors.
+
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+  X-Content-Type-Options: nosniff
