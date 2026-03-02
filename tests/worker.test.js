@@ -44,9 +44,9 @@ async function readStreamAsJSON(response, context) {
 /**
  * Creates a mock Cloudflare Pages context object for tests to use.
  */
-function createContext(url) {
+function createContext(url, method = "GET") {
   const context = {
-    request: { url },
+    request: { url, method },
     waitUntil: (promise) => {
       context.pendingPromise = promise;
     },
@@ -133,6 +133,40 @@ describe("Cloudflare Worker JS Edge Processing", () => {
   });
 
   describe("Validation (Query Parameters)", () => {
+    /*
+     * Validates that the Cloudflare Worker responds with an HTTP 405 Method Not Allowed
+     * for non-GET requests (POST, PUT, DELETE, etc.) since this is a read-only API.
+     */
+    it("rejects non-GET HTTP methods with 405", async () => {
+      for (const method of ["POST", "PUT", "DELETE", "PATCH"]) {
+        const context = createContext(
+          "https://example.com/api/blocklists?lists=listA",
+          method,
+        );
+        const response = await onRequest(context);
+        assert.strictEqual(
+          response.status,
+          405,
+          `Expected 405 for ${method} request`,
+        );
+      }
+    });
+
+    /*
+     * Validates that the Worker rejects requests exceeding the maximum list count (20)
+     * to prevent abuse through excessive CPU/memory usage.
+     */
+    it("rejects requests exceeding the 20-list limit", async () => {
+      const lists = Array.from({ length: 21 }, (_, i) => `list${i}`).join(",");
+      const context = createContext(
+        `https://example.com/api/blocklists?lists=${lists}`,
+      );
+      const response = await onRequest(context);
+      assert.strictEqual(response.status, 400);
+      const body = await response.text();
+      assert.match(body, /Too many lists/);
+    });
+
     /*
      * Validates that the Cloudflare Worker responds with an HTTP 400 Bad Request
      * if the user completely omits the `?lists=` query configuration parameter.
@@ -254,6 +288,7 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       const context = {
         request: {
           url: "https://example.com/api/blocklists?lists=listA,,,listB",
+          method: "GET",
         },
         waitUntil: (promise) => {
           context.pendingPromise = promise;
@@ -273,6 +308,7 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       const context = {
         request: {
           url: "https://example.com/api/blocklists?lists=%20listA%20,%20listB%20",
+          method: "GET",
         },
         waitUntil: (promise) => {
           context.pendingPromise = promise;
@@ -296,6 +332,7 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       const context = {
         request: {
           url: "https://example.com/api/blocklists?lists=listA",
+          method: "GET",
         },
         waitUntil: (promise) => {
           context.pendingPromise = promise;
@@ -337,6 +374,7 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       const context = {
         request: {
           url: "https://example.com/api/blocklists?lists=listA",
+          method: "GET",
         },
         waitUntil: (promise) => {
           context.pendingPromise = promise;
@@ -372,6 +410,7 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       const context400 = {
         request: {
           url: "https://example.com/api/blocklists?lists=../../evil",
+          method: "GET",
         },
       };
       const response400 = await onRequest(context400);
@@ -386,6 +425,7 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       const context404 = {
         request: {
           url: "https://example.com/api/blocklists?lists=nonexistent-list",
+          method: "GET",
         },
       };
       const response404 = await onRequest(context404);

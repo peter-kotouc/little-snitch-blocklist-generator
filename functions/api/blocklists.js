@@ -104,6 +104,12 @@ function errorResponse(body, status, contentType = "text/plain") {
  */
 export async function onRequest(context) {
   const request = context.request;
+
+  // Only accept GET requests — this is a read-only API
+  if (request.method !== "GET") {
+    return errorResponse("Method not allowed", 405);
+  }
+
   const url = new URL(request.url);
   const listsParam = url.searchParams.get("lists") || "";
 
@@ -122,6 +128,14 @@ export async function onRequest(context) {
   if (listNames.length === 0) {
     return errorResponse(
       "Missing 'lists' query parameter. Example: ?lists=hagezi-light,blocklistproject-ads",
+      400,
+    );
+  }
+
+  // Cap the number of lists per request to prevent abuse (excessive CPU/memory usage)
+  if (listNames.length > 20) {
+    return errorResponse(
+      `Too many lists requested (${listNames.length}). Maximum is 20.`,
       400,
     );
   }

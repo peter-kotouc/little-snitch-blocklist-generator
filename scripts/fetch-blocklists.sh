@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 # =============================================================================
 # fetch-blocklists.sh — DNS Blocklist Fetch, Validate, and Preprocess Pipeline
@@ -41,7 +41,12 @@ set -e
 #     A separate GitHub Issue is opened in CI with sample invalid lines.
 #
 # ERROR HANDLING:
-#   - `set -e` causes the script to exit on any unhandled non-zero exit code.
+#   - `set -euo pipefail` enables Bash strict mode with three protections:
+#       • `-e` (errexit):   Exit immediately on any unhandled non-zero exit code.
+#       • `-u` (nounset):   Treat references to unset variables as errors (prevents
+#                           silent bugs from typos like `$NAEM` instead of `$NAME`).
+#       • `-o pipefail`:    If any command in a pipeline fails, the pipeline's exit
+#                           code is the failing command's code (not just the last one).
 #   - Individual blocklist failures are caught and logged but do NOT abort the
 #     entire pipeline. The `continue` statement skips to the next entry.
 #   - `git checkout || true` is used for graceful recovery; it silently passes

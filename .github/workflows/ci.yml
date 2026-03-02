@@ -50,7 +50,7 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run Test Suite
         run: npm test

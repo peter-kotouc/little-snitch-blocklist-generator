@@ -57,6 +57,10 @@ permissions:
   contents: write # Needed to push commits
   issues: write # Needed to create issues on fetch failure
 
+concurrency:
+  group: fetch-blocklists
+  cancel-in-progress: true
+
 jobs:
   process-blocklists:
     runs-on: ubuntu-latest
@@ -70,6 +74,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
+      - name: Install dependencies
+        if: github.event_name != 'schedule'
+        run: npm install
 
       - name: Run Test Suite (Worker & Fetch Logic)
         if: github.event_name != 'schedule'
