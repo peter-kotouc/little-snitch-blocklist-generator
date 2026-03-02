@@ -1,7 +1,7 @@
 # Blocklist: hagezi-light
 # Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/light.txt
 # License: GPL-3.0 license (https://github.com/hagezi/dns-blocklists/blob/main/LICENSE)
-# Processed: 2026-03-02T18:30:38Z
+# Processed: 2026-03-02T18:34:08Z
 0-02.net
 0-3.org
 0-btc.com
