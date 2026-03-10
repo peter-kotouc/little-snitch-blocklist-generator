@@ -18,16 +18,28 @@ This project has two stages:
 
 2. **Cloudflare Worker API** — At request time, fetches the pre-sorted blocklist files, performs an O(N) k-way merge with deduplication across lists, and streams a Little Snitch-compatible JSON ruleset back to the client.
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://mermaid.ink/img/Zmxvd2NoYXJ0IFRECiAgICBzdWJncmFwaCBzdGFnZTFbIlN0YWdlIDEg4oCUIEdpdEh1YiBBY3Rpb25zIMK3IGRhaWx5IC8gb24gcHVzaCJdCiAgICAgICAgQVsi8J-TpSBGZXRjaCByYXcgYmxvY2tsaXN0czxici8-KGN1cmwgZnJvbSB1cHN0cmVhbSBVUkxzKSJdCiAgICAgICAgQlsi8J-nuSBWYWxpZGF0ZSAmIHByZXByb2Nlc3M8YnIvPihzdHJpcCBjb21tZW50cywgQ1JMRiwgZGVkdXApIl0KICAgICAgICBDWyLwn5OCIENvbW1pdCB0byBibG9ja2xpc3RzLzxici8-KHNvcnRlZCAudHh0IGZpbGVzKSJdCiAgICAgICAgQSAtLT4gQiAtLT4gQwogICAgZW5kCgogICAgc3ViZ3JhcGggc3RhZ2UyWyJTdGFnZSAyIOKAlCBDbG91ZGZsYXJlIFdvcmtlciDCtyBvbiByZXF1ZXN0Il0KICAgICAgICBEWyLwn5OhIFJlY2VpdmUgcmVxdWVzdDxici8-KD9saXN0cz1oYWdlemktbGlnaHQsLi4uKSJdCiAgICAgICAgRVsi8J-UgCBLLXdheSBtZXJnZTxici8-KE8oTikgZGVkdXBsaWNhdGlvbikiXQogICAgICAgIEZbIvCfk6QgU3RyZWFtIEpTT04gcmVzcG9uc2U8YnIvPihMaXR0bGUgU25pdGNoIHJ1bGVzKSJdCiAgICAgICAgRCAtLT4gRSAtLT4gRgogICAgZW5kCgogICAgQyAtLSAiSG9zdGVkIG9uPGJyLz5DbG91ZGZsYXJlIFBhZ2VzIiAtLT4gRA==?bgColor=!1e1e1e&theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://mermaid.ink/img/Zmxvd2NoYXJ0IFRECiAgICBzdWJncmFwaCBzdGFnZTFbIlN0YWdlIDEg4oCUIEdpdEh1YiBBY3Rpb25zIMK3IGRhaWx5IC8gb24gcHVzaCJdCiAgICAgICAgQVsi8J-TpSBGZXRjaCByYXcgYmxvY2tsaXN0czxici8-KGN1cmwgZnJvbSB1cHN0cmVhbSBVUkxzKSJdCiAgICAgICAgQlsi8J-nuSBWYWxpZGF0ZSAmIHByZXByb2Nlc3M8YnIvPihzdHJpcCBjb21tZW50cywgQ1JMRiwgZGVkdXApIl0KICAgICAgICBDWyLwn5OCIENvbW1pdCB0byBibG9ja2xpc3RzLzxici8-KHNvcnRlZCAudHh0IGZpbGVzKSJdCiAgICAgICAgQSAtLT4gQiAtLT4gQwogICAgZW5kCgogICAgc3ViZ3JhcGggc3RhZ2UyWyJTdGFnZSAyIOKAlCBDbG91ZGZsYXJlIFdvcmtlciDCtyBvbiByZXF1ZXN0Il0KICAgICAgICBEWyLwn5OhIFJlY2VpdmUgcmVxdWVzdDxici8-KD9saXN0cz1oYWdlemktbGlnaHQsLi4uKSJdCiAgICAgICAgRVsi8J-UgCBLLXdheSBtZXJnZTxici8-KE8oTikgZGVkdXBsaWNhdGlvbikiXQogICAgICAgIEZbIvCfk6QgU3RyZWFtIEpTT04gcmVzcG9uc2U8YnIvPihMaXR0bGUgU25pdGNoIHJ1bGVzKSJdCiAgICAgICAgRCAtLT4gRSAtLT4gRgogICAgZW5kCgogICAgQyAtLSAiSG9zdGVkIG9uPGJyLz5DbG91ZGZsYXJlIFBhZ2VzIiAtLT4gRA==?bgColor=!white&theme=neutral">
+    <img src="https://mermaid.ink/img/Zmxvd2NoYXJ0IFRECiAgICBzdWJncmFwaCBzdGFnZTFbIlN0YWdlIDEg4oCUIEdpdEh1YiBBY3Rpb25zIMK3IGRhaWx5IC8gb24gcHVzaCJdCiAgICAgICAgQVsi8J-TpSBGZXRjaCByYXcgYmxvY2tsaXN0czxici8-KGN1cmwgZnJvbSB1cHN0cmVhbSBVUkxzKSJdCiAgICAgICAgQlsi8J-nuSBWYWxpZGF0ZSAmIHByZXByb2Nlc3M8YnIvPihzdHJpcCBjb21tZW50cywgQ1JMRiwgZGVkdXApIl0KICAgICAgICBDWyLwn5OCIENvbW1pdCB0byBibG9ja2xpc3RzLzxici8-KHNvcnRlZCAudHh0IGZpbGVzKSJdCiAgICAgICAgQSAtLT4gQiAtLT4gQwogICAgZW5kCgogICAgc3ViZ3JhcGggc3RhZ2UyWyJTdGFnZSAyIOKAlCBDbG91ZGZsYXJlIFdvcmtlciDCtyBvbiByZXF1ZXN0Il0KICAgICAgICBEWyLwn5OhIFJlY2VpdmUgcmVxdWVzdDxici8-KD9saXN0cz1oYWdlemktbGlnaHQsLi4uKSJdCiAgICAgICAgRVsi8J-UgCBLLXdheSBtZXJnZTxici8-KE8oTikgZGVkdXBsaWNhdGlvbikiXQogICAgICAgIEZbIvCfk6QgU3RyZWFtIEpTT04gcmVzcG9uc2U8YnIvPihMaXR0bGUgU25pdGNoIHJ1bGVzKSJdCiAgICAgICAgRCAtLT4gRSAtLT4gRgogICAgZW5kCgogICAgQyAtLSAiSG9zdGVkIG9uPGJyLz5DbG91ZGZsYXJlIFBhZ2VzIiAtLT4gRA==?bgColor=!white&theme=neutral" alt="Data Pipeline Flowchart">
+  </picture>
+</p>
+
+<details>
+<summary>Mermaid Source for future edits</summary>
+
 ```mermaid
 flowchart TD
-    subgraph stage1["Stage 1 — GitHub Actions · daily / on push to main"]
+    subgraph stage1["Stage 1 — GitHub Actions · daily / on push"]
         A["📥 Fetch raw blocklists<br/>(curl from upstream URLs)"]
         B["🧹 Validate & preprocess<br/>(strip comments, CRLF, dedup)"]
         C["📂 Commit to blocklists/<br/>(sorted .txt files)"]
         A --> B --> C
+
     end
 
-    subgraph stage2["Stage 2 — Cloudflare Worker · on API request"]
+    subgraph stage2["Stage 2 — Cloudflare Worker · on request"]
         D["📡 Receive request<br/>(?lists=hagezi-light,...)"]
         E["🔀 K-way merge<br/>(O(N) deduplication)"]
         F["📤 Stream JSON response<br/>(Little Snitch rules)"]
@@ -36,6 +48,8 @@ flowchart TD
 
     C -- "Hosted on<br/>Cloudflare Pages" --> D
 ```
+
+</details>
 
 ---
 
