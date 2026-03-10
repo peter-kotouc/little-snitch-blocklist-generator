@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-phishing
 # Source: https://blocklistproject.github.io/Lists/alt-version/phishing-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-03-09T05:16:35Z
+# Processed: 2026-03-10T05:06:01Z
 0.01.2.13.3.sydneypropertyinvestors.com
 0.01.2.23.3.sydneypropertyinvestors.com
 000.9.009.09.ekurbani.com
