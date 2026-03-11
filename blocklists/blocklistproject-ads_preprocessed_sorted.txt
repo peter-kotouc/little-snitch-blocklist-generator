@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-ads
 # Source: https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-03-10T05:05:51Z
+# Processed: 2026-03-11T05:07:12Z
 0.fls.doubleclick.net
 0.r.msn.com
 0.start.bz
