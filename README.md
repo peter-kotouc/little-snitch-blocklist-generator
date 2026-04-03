@@ -176,3 +176,11 @@ The **upstream blocklist data** (the domain lists fetched from third-party sourc
 | Hagezi           | [GPL-3.0](https://github.com/hagezi/dns-blocklists/blob/main/LICENSE)      |
 
 This tool only fetches, preprocesses, and redistributes the upstream data with full attribution. The Cloudflare Worker API response includes an `upstream_blocklists` field listing the exact license and source for every included list.
+
+---
+
+### 🤖 Responsible Use of AI
+
+Portions of this code and README were AI-generated, then manually reviewed for accuracy and logical correctness. I utilized custom prompts to ensure industry standards for documentation, CI/CD, and test coverage. This project was a successful experiment in AI-assisted development, and I am very pleased with the results.
+
+While I specified the architecture, I utilized AI as a collaborative 'programming buddy' to challenge my assumptions and refine the design through iterative questioning.
