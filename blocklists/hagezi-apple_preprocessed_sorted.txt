@@ -1,7 +1,7 @@
 # Blocklist: hagezi-apple
 # Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.apple.txt
 # License: GPL-3.0 license (https://github.com/hagezi/dns-blocklists/blob/main/LICENSE)
-# Processed: 2026-04-03T15:37:50Z
+# Processed: 2026-04-04T05:18:19Z
 ab.apple.com.akadns.net
 acfeedbackws.icloud.com
 advertising.apple.com
@@ -10,6 +10,7 @@ api-adservices.apple.com
 applemediaservices.com
 beacon.shazam.com
 books-analytics-events.apple.com
+books-analytics-events.news.apple-dns.net
 ca.iadsdk.apple.com
 cdn-xp-ingest-ab.v.aaplimg.com
 cdn-xp-ingest.edge.apple
@@ -66,6 +67,7 @@ news-events.apple.com
 news-notification-events.apple.com
 news-sports-events.apple.com
 notes-analytics-events.apple.com
+notes-analytics-events.news.apple-dns.net
 odin-signals.apple.com
 partiality.itunes-apple.com.akadns.net
 partiality.itunes.apple.com
@@ -96,10 +98,12 @@ securemvt.v.aaplimg.com
 skadnetwork.iad-apple.com.akadns.net
 smoot-feedback.v.aaplimg.com
 stocks-analytics-events.apple.com
+stocks-analytics-events.news.apple-dns.net
 supportmetrics.apple.com
 supportmetrics.v.aaplimg.com
 tr.iadsdk.apple.com
 weather-analytics-events.apple.com
+weather-analytics-events.news.apple-dns.net
 www.qwapi.com
 xp-cdn-lb.itunes-apple.com.akadns.net
 xp-cdn.apple.com
