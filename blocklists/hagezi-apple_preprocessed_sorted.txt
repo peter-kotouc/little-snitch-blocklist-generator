@@ -1,7 +1,7 @@
 # Blocklist: hagezi-apple
 # Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.apple.txt
 # License: GPL-3.0 license (https://github.com/hagezi/dns-blocklists/blob/main/LICENSE)
-# Processed: 2026-06-18T08:37:39Z
+# Processed: 2026-06-19T08:59:19Z
 ab.apple.com.akadns.net
 acfeedbackws.icloud.com
 advertising.apple.com
