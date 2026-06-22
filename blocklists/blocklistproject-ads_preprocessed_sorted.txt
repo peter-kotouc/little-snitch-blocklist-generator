@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-ads
 # Source: https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-06-21T08:21:07Z
+# Processed: 2026-06-22T09:39:10Z
 0.fls.doubleclick.net
 0.r.msn.com
 0.start.bz
@@ -26369,6 +26369,7 @@ adbl.spieletipps.de
 adblade.com
 adblade.org
 adblender.ru
+adblendr.io
 adblock-proxy.rtty.in
 adblock.fr
 adblockanalytics.com
@@ -31224,6 +31225,7 @@ adsbtrack.com
 adsby.bidtheatre.com
 adsby.breezeads.com
 adsby.effective-ads.com
+adsby.io
 adsby.klikki.com
 adsby.popupmoney.com
 adsby.webtraffic.se
@@ -102708,6 +102710,7 @@ panel.onaudience.com
 panel.research-int.se
 panel.scorecardresearch.com
 panel.vargakragard.se
+panel.webanalytic.org
 panel2.research-int.se
 panelapi.veinteractive.com
 panelapihk.veinteractive.com
@@ -104220,7 +104223,6 @@ piwik.n24.de
 piwik.onlinemagasinet.no
 piwik.org
 piwik.pokerlistings.com
-piwik.pro
 piwik.redtube.com
 piwik.schulzesteinmann.de
 piwik.shenghuo.xiaomi.com
@@ -121767,7 +121769,6 @@ static.itest.propellerads.com
 static.itrack.it
 static.jp.as.criteo.net
 static.juicyads.com
-static.jvc.gg
 static.kameleoon.com
 static.kameleoon.eu
 static.kibboko.com
@@ -123433,7 +123434,6 @@ supply.colossusssp.com
 supply.upjers.com
 supply.xapads.com
 supply2.clickganic.com
-supplyframe.com
 support-ip.com
 support-win1230.com
 support.a-ads.com
