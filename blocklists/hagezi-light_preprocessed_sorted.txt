@@ -1,7 +1,7 @@
 # Blocklist: hagezi-light
 # Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/light.txt
 # License: GPL-3.0 license (https://github.com/hagezi/dns-blocklists/blob/main/LICENSE)
-# Processed: 2026-06-22T09:39:23Z
+# Processed: 2026-06-23T07:40:20Z
 0-0-0checkmate.com
 0.0-02.net
 0.0.logitechg.com.cn.obs.cn-north-1.myhuaweicloud.com
@@ -12015,6 +12015,7 @@ ads-cloud.rovio.com
 ads-collector.luizalabs.com
 ads-config-engine-noneu.truecaller.com
 ads-config.unityads.unity3d.com
+ads-configs-cdn.openweb.com
 ads-connect.com
 ads-ctv.unity3d.com
 ads-d.viber.com
@@ -15049,7 +15050,6 @@ analytics.debenhams.com
 analytics.decisionresourcesgroup.com
 analytics.degreed.com
 analytics.deliverydireto.com.br
-analytics.dev.azure.com
 analytics.dev.htmedia.in
 analytics.devalltech.com.br
 analytics.devcloudsoftware.com
@@ -15839,6 +15839,7 @@ anc.temporary.site
 anccloud3.xyz
 ancestry-d.openx.net
 ancestry-mcsp.demdex.net
+anchbatic.co.in
 anchored-hold.com
 anchoreditor.com
 ancientact.com
@@ -18387,6 +18388,7 @@ avd.innity.com
 avd.innity.net
 avdego.net
 avdvd.at-ninja.jp
+avebeentriflin.com
 avehospitablestrangers.com
 avelyn-site.tiiny.site
 avequipmentblog.sitey.me
@@ -20340,6 +20342,7 @@ bfxytxdpnk.com
 bfyydwxdkefev.online
 bfyz-defender.pro
 bfzneeafwhntt.site
+bfzzymmxqgali.online
 bg-mezonet.info
 bg.adocean.pl
 bg.pensionhotel.com
@@ -22177,6 +22180,7 @@ buzzoola.com
 buzzoole.com
 bv.brg0.com
 bv.lnk0.com
+bv1uktljih4r5gu9hftm8ozv11lx.cfd
 bvbuy.ninpou.jp
 bvddfghxdsfd.top
 bveioagdmsmlfmp.com
@@ -24175,6 +24179,7 @@ cdn.simpli.fi
 cdn.siteswithcontent.com
 cdn.skcrtxr.com
 cdn.slots.baxter.olx.org
+cdn.smalk.ai
 cdn.smart-digital-solutions.com
 cdn.smartclip.net
 cdn.smartico.one
@@ -26066,6 +26071,7 @@ codeadnetwork.com
 codeanyapp.com
 codecarrot.net
 codedome.online
+codedrink.com
 codefund.io
 codeguide.bootcss.com
 coderformylife.info
@@ -28604,6 +28610,7 @@ d3.sina.com.cn
 d300495af.app-ads-txt.com
 d30qdagvt44524.cloudfront.net
 d313lzv9559yp9.cloudfront.net
+d318g7p3azvr44.cloudfront.net
 d31aip.cdn-settings.appsflyersdk.com
 d31aip.inapps.appsflyersdk.com
 d31aip.launches.appsflyersdk.com
@@ -31046,6 +31053,7 @@ drt1fhpy4haqm.cloudfront.net
 drubpainch.com
 drugeugene.cfd
 drugstoredemuretake.com
+druxxo.com
 drwps.com
 dry-effort.pro
 drycoaloutbray.qpon
@@ -31144,6 +31152,7 @@ dshtoolbar.ourtoolbar.com
 dsicxo.com
 dsidas.com
 dsiflqhqyfmp.com
+dsiill.com
 dsikyf.com
 dsimnq.com
 dsincy.com
@@ -31171,6 +31180,7 @@ dsmstats.com
 dsmuvt.com
 dsnbwt.com
 dsnbym.com
+dsndcg.com
 dsneim.com
 dsnfo.pokemoncenter.com
 dsnfrt.com
@@ -34183,7 +34193,9 @@ eventsv2balanced.malpagames.com
 eventtrace.ru
 eventtrack.pandasecurity.com
 eventtracker.dsa.apps.schwarz
+eventtracking-ap1.hubapi.com
 eventtracking-eu1.hubapi.com
+eventtracking-na2.hubapi.com
 eventtracking.hubapi.com
 everardcotland.cfd
 everbestmarketingtips.sitey.me
@@ -36039,6 +36051,7 @@ fnphy6.launches.appsflyersdk.com
 fntvloqdmf.com
 fnvoi.shapermint.com
 fnvs9x.launches.appsflyersdk.com
+fnvxpndhciszp.website
 fnwstrndfdwv.xyz
 fnyfeds.com
 fnzblx-launches.appsflyersdk.com
@@ -40825,6 +40838,7 @@ hrwuye.com
 hryjinult.com
 hrzfx.wellmedr.com
 hrzn-nxt.com
+hs-analytics.in
 hs-analytics.net
 hs-growth-metrics.com
 hs.adingo.jp
@@ -44644,6 +44658,7 @@ js-ap1.hs-analytics.net
 js-ap1.hsadspixel.net
 js-ap1.hscollectedforms.net
 js-ap1.hubspotfeedback.com
+js-ap1.usemessages.com
 js-api.otherlevels.com
 js-cdn.dynatrace.com
 js-check.com
@@ -44654,10 +44669,12 @@ js-eu1.hs-banner.com
 js-eu1.hsadspixel.net
 js-eu1.hscollectedforms.net
 js-eu1.hubspotfeedback.com
+js-eu1.usemessages.com
 js-fra04-origin.spectrum.hs-analytics.net
 js-na2.hs-analytics.net
 js-na2.hsadspixel.net
 js-na2.hscollectedforms.net
+js-na2.usemessages.com
 js-na3.hs-analytics.net
 js-na3.hsadspixel.net
 js-na3.hscollectedforms.net
@@ -49876,6 +49893,7 @@ me.xdrig.com
 me08mo.com
 me0a593d2.app-ads-txt.com
 me9ksp.cdn-settings.appsflyersdk.com
+meadow-assets.click
 meae5cc72.app-ads-txt.com
 meal.embossfor.com
 mealcardcowww38.wire.2.wanyol.com.obs.cn-north-1.myhuaweicloud.com
@@ -52980,6 +52998,7 @@ nenaqnyhjfvbr.site
 nend.net
 nengu.jp
 nenqzhqllxefb.website
+neo7x.com
 neocounter.neoworx-blog-tools.net
 neodatagroup.com
 neoera-cdn.relevant-digital.com
@@ -53396,6 +53415,7 @@ nikg3w.launches.appsflyersdk.com
 nikodroid.000webhostapp.com
 nikolaipogge.shop
 nilc9f.launches.appsflyersdk.com
+nilgaisquipful.qpon
 nimblebird.co
 nimbleplot.com
 nimbleswan.io
@@ -57781,7 +57801,6 @@ play.ott.video.qq.com
 play.pokermatch.com
 play.rayjump.com
 play.seenthis.co
-play.sweepstakesalerts.com
 playable-portal.mintegral.com
 playable-stats.mintegral.net
 playable.directservices.it
@@ -58771,6 +58790,7 @@ processors7070.com
 processors801.net
 processors911.com
 processorsinlake.net
+processorsoutash.net
 processplantation.com
 procore.demdex.net
 prod-a.applovin.com
@@ -69195,6 +69215,7 @@ sh2m-ue789.imptracking.com
 sh2o-ue469.imptracking.com
 sh2o-ue471.imptracking.com
 sh2o-ue472.imptracking.com
+shabbatglomera.cyou
 shadowsecurity.uni.cc
 shadyrecording.pro
 shafayat.com
@@ -73658,7 +73679,6 @@ sweatypositive.com
 sweb.ulta.com
 swebmetrics.zebra.com
 sweepsrashest.cfd
-sweepstakesalerts.com
 sweet-engineer.pro
 sweetimage.net
 sweetmemo.net
@@ -76939,6 +76959,7 @@ torbit.com
 torchongardeenshoplet.cfd
 toriccele.cyou
 toriimorwinery.com
+tornado.cash
 tornadostore.de
 toroadvertising.com
 toroexoclk.com
@@ -77880,6 +77901,7 @@ transaction-watcher-2.littledata.io
 transcoding.creativecdn.com
 transcorpoil.com
 transcorpoil.us
+transdecoke.cfd
 transfer.sec.miui.com
 transferin320.com
 transferzenad.com
