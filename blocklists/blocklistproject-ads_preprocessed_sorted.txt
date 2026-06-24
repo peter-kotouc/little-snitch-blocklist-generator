@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-ads
 # Source: https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-06-23T07:40:13Z
+# Processed: 2026-06-24T07:32:42Z
 0.fls.doubleclick.net
 0.r.msn.com
 0.start.bz
@@ -37373,7 +37373,6 @@ api.sdk.wiman.io
 api.sdk.zadn.vn
 api.sdkbox.com
 api.searchiq.co
-api.sec.intl.miui.com
 api.sec.miui.com
 api.segment.io
 api.selfserve.rubiconproject.com
@@ -37418,7 +37417,6 @@ api.supersonicads.com
 api.survicate.com
 api.swrve.com
 api.taboola.com
-api.tapas.io
 api.tapjoy.com
 api.taplytics.com
 api.taps.io
@@ -49774,7 +49772,6 @@ cdn.yottos.com
 cdn.yourtopoffers.info
 cdn.zarget.com
 cdn.zeusclicks.com
-cdn.ziffstatic.com
 cdn.zkmobi.com
 cdn.zopim.com
 cdn0.fyber.com
@@ -51029,6 +51026,7 @@ cid3.actonsoftware.com
 cid5.actonsoftware.com
 cidemo.actonsoftware.com
 cidev.actonsoftware.com
+cidswimaj.com
 ciecissstwncw.com
 ciee.evergage.com
 cieh.mx
@@ -81685,7 +81683,6 @@ ip134.timesink.com
 ip193.cn
 ip2.casalemedia.com
 ip2c.landscape.co.jp
-ip2location.com
 ip2map.com
 ip2phrase.com
 ip400054.nym2.appnexus.com
@@ -82426,6 +82423,7 @@ ivypx.voluumtrk.com
 iw.a.mobimagic.com
 iw3.a.mobimagic.com
 iwa.hit.interia.pl
+iwad.cachefly.net
 iwantmoar.net
 iwanttodeliver.com
 iwanttoearn.money
@@ -91196,6 +91194,7 @@ mdsrggcnmybae.bid
 mdstaugustine.112.2o7.net
 mdstrat.actonsoftware.com
 mdt-www.marketo.com
+mdtb.ads.aps.amazon-adsystem.com
 mdtopeka.112.2o7.net
 mdtrack.click
 mdulmrphzsnvw.com
@@ -97226,7 +97225,6 @@ nimatey.info
 nimdinb.com
 nimei2tu5n.mentalist.kameleoon.com
 nimg.media.net
-nimiq.com
 nimiq.watch
 nimiqchain.info
 nimiqpool.com
@@ -102217,7 +102215,6 @@ p2pmining.com
 p2pool.co
 p2pool.in
 p2pool.info
-p2pool.io
 p2pool.neocities.org
 p2pool.org
 p2pool.site
@@ -107957,7 +107954,6 @@ pulse.data.flurry.com
 pulse.flurry.com
 pulse.inmobi.com
 pulse.smi2.ru
-pulse360.com
 pulsedm-ap-test.amobee.com
 pulsedm-ap.amobee.com
 pulselog.com
@@ -116470,7 +116466,6 @@ services.cmp.advertising.com
 services.districtm.net
 services.hearstmags.com
 services.krxd.net
-services.ludokingapi.com
 services.mailermailer.com
 services.rol.ru
 services.serving-sys.com
@@ -142389,7 +142384,6 @@ ws.moengage.com
 ws.onthe.io
 ws.plmokn.pw
 ws.push-notifs.com
-ws.pusherapp.com
 ws.routehero.com
 ws.sessioncam.com
 ws.sharethis.com

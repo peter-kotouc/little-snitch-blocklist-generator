@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-tracking
 # Source: https://blocklistproject.github.io/Lists/alt-version/tracking-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-06-23T07:40:18Z
+# Processed: 2026-06-24T07:32:46Z
 1-cl0ud.com
 1-creative-1.com
 1000mercis.com
@@ -2076,7 +2076,6 @@ gfsql.geforce.com
 gfswl.geforce.com
 ggimg.tapas.net
 ggo.directrev.com
-ghostery.com
 gigabytedealz.com
 gillyhunt.com
 gimmescreenshot.com

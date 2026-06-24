@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-phishing
 # Source: https://blocklistproject.github.io/Lists/alt-version/phishing-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-06-23T07:40:17Z
+# Processed: 2026-06-24T07:32:45Z
 0.01.2.13.3.sydneypropertyinvestors.com
 0.01.2.23.3.sydneypropertyinvestors.com
 000.9.009.09.ekurbani.com
@@ -106068,8 +106068,6 @@ verizonwire.info
 verizonwireess.com
 verizonwireless-messaging.com
 verizonwireless-txt.com
-verizonwireless.com
-verizonwireless.company
 verizonwireless.rocks
 verizonwireless4g.com
 verizonwireless5g.com
@@ -107599,7 +107597,6 @@ vz9dhqlskgwtlksyxmzm.littlematchagirl.com.au
 vzagainstwo.co.uk
 vzazrb.site
 vzdrzevan.si
-vzfraudatverizonwireless.com
 vziyqmtad.fu.maxgrowth.ru
 vzmakh.ru
 vzmo.bunopro.us
@@ -110280,7 +110277,6 @@ wwt.kz
 wwtech.eu
 wwuol.com.br
 wwv-apple.com
-wwverizonwireless.com
 wwvv-apple.com
 wwvv.vlabcep.pet
 wwvwsantandermobiile.com
@@ -127441,7 +127437,6 @@ www.cinemanetflix.com
 www.cinemania.us
 www.cinemanity.com
 www.cinemateus.com.br
-www.cinemazed.be
 www.cinemiz.net
 www.cinkantonlances.com
 www.cinny.athlodomi.com
@@ -181099,7 +181094,6 @@ www.verizonwire.info
 www.verizonwireess.com
 www.verizonwireless-messaging.com
 www.verizonwireless-txt.com
-www.verizonwireless.company
 www.verizonwireless.rocks
 www.verizonwireless4g.com
 www.verizonwireless5g.com
@@ -182126,7 +182120,6 @@ www.vysproindia.org
 www.vyxwtjsq.tk
 www.vz9dhqlskgwtlksyxmzm.littlematchagirl.com.au
 www.vzdrzevan.si
-www.vzfraudatverizonwireless.com
 www.w-bdesigns.co.uk
 www.w-eight.org
 www.w-eos.com
@@ -184002,7 +183995,6 @@ www.wwsantanderrmobily.com
 www.wwt.kz
 www.wwtech.eu
 www.wwv-apple.com
-www.wwverizonwireless.com
 www.wwvv-apple.com
 www.wwvwsantandermobiile.com
 www.www---apple.com
