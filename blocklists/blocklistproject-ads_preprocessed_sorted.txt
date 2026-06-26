@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-ads
 # Source: https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-06-25T07:34:51Z
+# Processed: 2026-06-26T07:42:23Z
 0.fls.doubleclick.net
 0.r.msn.com
 0.start.bz
@@ -93697,7 +93697,6 @@ mobileconspiracy.go2cloud.org
 mobilecore-thor.ironbeast.io
 mobilecore.com
 mobilecore.ironbeast.io
-mobilecrashreporting.googleapis.com
 mobilecrm.accengage.com
 mobiledl.adboe.com
 mobiledreams.offerstrack.net
@@ -149180,7 +149179,6 @@ www.tldtgs.com
 www.tlehflrectus.review
 www.tlkrvyuincommodes.review
 www.tlvmedia.com
-www.tm.a.prd.aadg.trafficmanager.net
 www.tms.triboomedia.it
 www.tmtrck.com
 www.tnctrx.com
@@ -153222,7 +153220,6 @@ zabpkrvgswdroz.com
 zacbwfgqvxan.com
 zacqkexd.com
 zaczpeabsygpdz.bid
-zadarma.com
 zadcloud.com
 zadhrsvmawp.com
 zads.care2.com
