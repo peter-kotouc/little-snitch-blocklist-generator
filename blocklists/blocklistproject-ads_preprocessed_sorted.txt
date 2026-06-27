@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-ads
 # Source: https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-06-26T07:42:23Z
+# Processed: 2026-06-27T06:46:16Z
 0.fls.doubleclick.net
 0.r.msn.com
 0.start.bz
@@ -8801,6 +8801,7 @@ a.lolwot.com
 a.lon.lpsnmedia.net
 a.lpsnmedia.net
 a.macuser.co.uk
+a.magsrv.com
 a.marketgid.com
 a.mayakinfo.ru
 a.measurementaz.com
