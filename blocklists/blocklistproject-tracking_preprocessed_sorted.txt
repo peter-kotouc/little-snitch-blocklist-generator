@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-tracking
 # Source: https://blocklistproject.github.io/Lists/alt-version/tracking-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-06-28T07:43:24Z
+# Processed: 2026-06-29T08:50:20Z
 1-cl0ud.com
 1-creative-1.com
 1000mercis.com
@@ -14161,6 +14161,7 @@ stathat.com
 static.audienceinsights.net
 static.chartbeat.com
 static.zanox.com
+statistik.changing-cities.org
 statistik.i22.de
 stats.adthink-media.com
 stats.adurr.com
