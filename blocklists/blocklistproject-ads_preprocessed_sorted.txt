@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-ads
 # Source: https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-07-05T15:22:11Z
+# Processed: 2026-07-06T08:10:51Z
 0--0.info
 0--4.com
 0--d.com
@@ -77206,7 +77206,6 @@ comptia.co1.qualtrics.com
 compu3.com
 compufixshop.com
 compulenta.ru.intellitxt.com
-compute-1.amazonaws.com
 computegoggleorbit.com
 computer-offer.com
 computeractive.uk.intellitxt.com
