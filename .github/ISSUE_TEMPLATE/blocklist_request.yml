@@ -1,0 +1,52 @@
+name: 🛡️ Blocklist request
+description: Suggest a new upstream blocklist to include in the pipeline
+title: "[Blocklist]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want it included faster? You can also submit it yourself as a Pull Request —
+        see [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) for the exact steps.
+  - type: input
+    id: name
+    attributes:
+      label: Proposed identifier
+      description: "A unique name using only letters, numbers, hyphens, and underscores (becomes the file name)."
+      placeholder: "example-ads"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Raw list URL
+      description: Direct link to the raw plain-text file (one domain per line — no Hosts or Adblock syntax).
+      placeholder: "https://raw.githubusercontent.com/example/lists/main/ads.txt"
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License (name + link)
+      description: The upstream list's license and a direct link to its license file.
+      placeholder: "MIT — https://github.com/example/lists/blob/main/LICENSE"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What does the list cover?
+      description: Scope, strategy, approximate size, and why it's a good fit alongside the existing lists.
+    validations:
+      required: true
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Requirements
+      options:
+        - label: The file contains one plain domain per line (no `0.0.0.0 domain.com`, no `||domain.com^`).
+          required: true
+        - label: The license permits redistribution (MIT, Unlicense, GPL, etc. — not proprietary/non-commercial).
+          required: true
+        - label: I checked that this list is not already covered by an existing entry in `blocklist_sources.json`.
+          required: true

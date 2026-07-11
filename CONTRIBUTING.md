@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing! Whether you're adding a new blocklist, fixing a bug, or improving the documentation, your help is appreciated. Opening issues is also appreciated, if you do not want to contribute code (Add requested blocklist with URL, description, license and I will review it).
 
+By participating you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md). For security vulnerabilities, please use the private reporting process in [SECURITY.md](SECURITY.md) instead of public issues; for general help, see [SUPPORT.md](SUPPORT.md).
+
 ## 🤝 How to Add a New Blocklist
 
 The most common way to contribute is by adding a new blocklist to the automated pipeline. Additionally, if you do not want to use this repo, you can fork it and use it as your own and create your own blocklist generator. Before you submit a Pull Request, please ensure you follow these steps:
