@@ -1,0 +1,10 @@
+# Blank issues MUST stay enabled: the CI pipeline (scripts/fetch-blocklists.sh)
+# files free-form issues via the gh CLI when a blocklist fetch fails.
+blank_issues_enabled: true
+contact_links:
+  - name: 🚫 Wrongly blocked domain (false positive)
+    url: https://github.com/peter-kotouc/little-snitch-blocklist-generator#-included-blocklists
+    about: Domain removals are handled by the upstream blocklist maintainers — find the right upstream project in this table.
+  - name: 🔒 Security vulnerability
+    url: https://github.com/peter-kotouc/little-snitch-blocklist-generator/security/advisories/new
+    about: Please report security issues privately via GitHub Security Advisories, never in public issues.
