@@ -98,11 +98,14 @@ The response is a streaming JSON document compatible with Little Snitch Rule Gro
       "license_url": "..."
     }
   ],
+  "skipped_lists": [],
   "rules": [
     { "action": "deny", "process": "any", "remote-domains": "ads.example.com" }
   ]
 }
 ```
+
+If a requested list doesn't exist (for example, it was removed from this repository), the API degrades gracefully: the remaining lists are merged as usual and the missing names are reported in the `skipped_lists` field, so existing subscription URLs keep working. Only when **none** of the requested lists exist does the API return a `404` error.
 
 **Not sure which blocklists to use?** Check [`recommendations.json`](recommendations.json) for curated presets:
 

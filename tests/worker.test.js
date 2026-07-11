@@ -232,12 +232,61 @@ describe("Cloudflare Worker JS Edge Processing", () => {
     });
 
     /*
-     * Validates that the Worker correctly identifies missing or invalid blocklist configurations
-     * and returns a detailed 404 JSON error response instead of silently failing or returning partial data.
+     * Validates graceful degradation: when SOME requested lists are missing
+     * (e.g., a blocklist was removed from the repo but a subscriber's URL still
+     * names it), the Worker merges the lists that exist and transparently
+     * reports the rest in `skipped_lists` instead of failing the whole request.
+     * This keeps existing Little Snitch subscriptions alive across removals.
      */
-    it("returns a 404 JSON error if one or more requested blocklists are missing", async () => {
+    it("merges available lists and reports missing ones in skipped_lists", async () => {
       const context = createContext(
         "https://example.com/api/blocklists?lists=listA,missing-list-name",
+      );
+
+      const response = await onRequest(context);
+      assert.strictEqual(
+        response.status,
+        200,
+        "Partial availability must degrade gracefully, not fail the request",
+      );
+
+      const json = await readStreamAsJSON(response, context);
+
+      assert.deepStrictEqual(
+        json.skipped_lists,
+        ["missing-list-name"],
+        "Missing lists must be reported transparently in skipped_lists",
+      );
+      assert.ok(
+        json.rules.length > 0,
+        "Rules from the available lists must still be merged",
+      );
+      assert.match(
+        json.description,
+        /listA/,
+        "Description must name the merged lists",
+      );
+      assert.doesNotMatch(
+        json.description,
+        /missing-list-name/,
+        "Description must not claim to contain skipped lists",
+      );
+      // Attribution must cover only the lists that are actually merged
+      assert.deepStrictEqual(
+        json.upstream_blocklists.map((b) => b.name),
+        ["Test List A"],
+      );
+    });
+
+    /*
+     * Validates the fail-closed boundary of graceful degradation: when NONE of
+     * the requested lists exist there is nothing to serve, and returning an
+     * empty ruleset would silently disable the client's blocking. That case
+     * must remain a hard 404 naming every missing list.
+     */
+    it("returns a 404 JSON error when ALL requested blocklists are missing", async () => {
+      const context = createContext(
+        "https://example.com/api/blocklists?lists=missing-one,missing-two",
       );
 
       const response = await onRequest(context);
@@ -250,9 +299,12 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       const jsonBody = await response.json();
       assert.strictEqual(
         jsonBody.error,
-        "One or more requested blocklists were not found.",
+        "None of the requested blocklists were found.",
       );
-      assert.deepStrictEqual(jsonBody.missing_lists, ["missing-list-name"]);
+      assert.deepStrictEqual(jsonBody.missing_lists, [
+        "missing-one",
+        "missing-two",
+      ]);
     });
 
     /*

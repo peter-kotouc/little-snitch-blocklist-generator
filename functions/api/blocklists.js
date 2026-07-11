@@ -75,11 +75,14 @@ function errorResponse(body, status, contentType = "text/plain") {
  * @precondition Each `.txt` file must be pre-sorted alphabetically (guaranteed by the GitHub Actions pipeline).
  *
  * @postcondition On success (200): Returns a streaming JSON response with Content-Type `application/json`.
- * @postcondition On success (200): The `rules` array contains exactly one entry per unique domain across all input lists.
- * @postcondition On success (200): The `upstream_blocklists` array contains license attribution for each requested list.
+ * @postcondition On success (200): The `rules` array contains exactly one entry per unique domain across all merged lists.
+ * @postcondition On success (200): The `upstream_blocklists` array contains license attribution for each merged list.
+ * @postcondition On success (200): The `skipped_lists` array names requested lists that do not exist and were
+ *                excluded from the merge (graceful degradation). Empty when every requested list was found.
  * @postcondition On success (200): Rules are sorted alphabetically (natural consequence of the k-way merge).
  * @postcondition On client error (400): Returned when `lists` param is missing, empty, or contains invalid characters.
- * @postcondition On not found (404): Returned as JSON when one or more requested blocklist files do not exist.
+ * @postcondition On not found (404): Returned as JSON only when NONE of the requested blocklist files exist —
+ *                there is nothing to serve, so failing loudly beats returning an empty ruleset.
  * @postcondition On server error (500): Returned as plaintext when an unexpected exception occurs.
  * @postcondition All responses include `X-Content-Type-Options: nosniff` and `X-Robots-Tag` security headers.
  *
@@ -99,6 +102,7 @@ function errorResponse(body, status, contentType = "text/plain") {
  *     { "name": "Hagezi Light", "license": "GPL-3.0 license", "license_url": "..." },
  *     { "name": "BlocklistProject Ads", "license": "Unlicense", "license_url": "..." }
  *   ],
+ *   "skipped_lists": [],
  *   "rules": [
  *     { "action": "deny", "process": "any", "remote-domains": "ads.example.com" },
  *     ...
@@ -184,19 +188,6 @@ export async function onRequest(context) {
       );
     }
 
-    // Build the upstream_blocklists attribution array for only the requested lists
-    const upstreamBlocklists = listNames
-      .map((name) => {
-        const source = allSources.find((s) => s.name === name);
-        if (!source) return null;
-        return {
-          name: source.fullName || source.name,
-          license: source.license,
-          license_url: source.license_url,
-        };
-      })
-      .filter(Boolean);
-
     // Fetch all requested lists in parallel
     const fetchPromises = listNames.map(async (name) => {
       const blocklistUrl = `${baseUrl}/blocklists/${name}_preprocessed_sorted.txt`;
@@ -216,20 +207,40 @@ export async function onRequest(context) {
 
     const results = await Promise.all(fetchPromises);
 
-    // If any blocklists failed to download (e.g., 404 Not Found), intercept and return a JSON error
-    const missingLists = results.filter((r) => r.error);
-    if (missingLists.length > 0) {
+    // Graceful degradation: missing lists (e.g., removed from the repo) are
+    // skipped and reported in the response's `skipped_lists` field instead of
+    // failing the whole request. Only when NONE of the requested lists exist
+    // is there nothing to serve — that stays a hard 404, because an empty
+    // ruleset would silently disable the client's blocking.
+    const skippedLists = results.filter((r) => r.error).map((r) => r.name);
+    if (skippedLists.length === listNames.length) {
       return errorResponse(
         JSON.stringify({
-          error: "One or more requested blocklists were not found.",
-          missing_lists: missingLists.map((r) => r.name),
+          error: "None of the requested blocklists were found.",
+          missing_lists: skippedLists,
         }),
         404,
         "application/json",
       );
     }
 
-    const texts = results.map((r) => r.text);
+    // Lists that resolved — results[i] aligns with listNames[i]
+    const mergedNames = listNames.filter((_, i) => !results[i].error);
+    const texts = results.filter((r) => !r.error).map((r) => r.text);
+
+    // Build the upstream_blocklists attribution array for the lists that are
+    // actually part of the merge (skipped lists get no attribution entry)
+    const upstreamBlocklists = mergedNames
+      .map((name) => {
+        const source = allSources.find((s) => s.name === name);
+        if (!source) return null;
+        return {
+          name: source.fullName || source.name,
+          license: source.license,
+          license_url: source.license_url,
+        };
+      })
+      .filter(Boolean);
 
     // Parse each text into an array of domain strings.
     // Precondition: Each text blob is a newline-delimited, alphabetically sorted domain list
@@ -262,13 +273,14 @@ export async function onRequest(context) {
       (async () => {
         try {
           const headerObj = {
-            description: `Merged blocklist containing: ${listNames.join(", ")}`,
+            description: `Merged blocklist containing: ${mergedNames.join(", ")}`,
             name: `Dynamic Blocklist provided by ${AUTHOR_NAME}`,
             upstream_blocklists: upstreamBlocklists,
+            skipped_lists: skippedLists,
             copyright:
               "Upstream blocklist data is provided by their respective authors under the licenses listed in upstream_blocklists. This tool's code is MIT-licensed. See source repo for details.",
             source: REPOSITORY_URL,
-            rules: [], // We'll truncate this and stream the array contents
+            rules: [], // MUST stay the last property — the streaming code splices the output at the final "[]"
           };
 
           let headerStr = JSON.stringify(headerObj, null, 2);
