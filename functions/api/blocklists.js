@@ -7,8 +7,8 @@
  * 1. Parse and validate the `?lists=` query parameter
  * 2. Fetch `blocklist_sources.json` for upstream license attribution
  * 3. Fetch all requested `_preprocessed_sorted.txt` files in parallel
- * 4. Perform an O(N) k-way merge across sorted lists using pointer iteration
- * 5. Stream the deduplicated JSON rules via TransformStream to avoid memory limits
+ * 4. Perform an O(N·K) k-way merge across sorted lists using pointer iteration
+ * 5. Stream the deduplicated JSON rules via TransformStream to bound output buffering
  *
  * ## Algorithm: K-Way Merge with Deduplication
  * Each blocklist file is pre-sorted alphabetically by the GitHub Actions pipeline.
@@ -17,9 +17,12 @@
  * emitting the domain exactly once.
  *
  * ## Streaming Strategy
- * The response is streamed via a TransformStream to stay within Cloudflare's 128MB
- * memory limit. Rules are buffered in chunks of 5,000 before flushing to the stream,
- * balancing between memory efficiency and minimizing expensive await microtasks.
+ * The response is streamed via a TransformStream so the generated JSON output is
+ * never held in memory all at once. Rules are buffered in chunks of 5,000 before
+ * flushing to the stream, balancing between memory efficiency and minimizing
+ * expensive await microtasks. Note: the INPUT lists are fully buffered in memory
+ * (parsedLists), so total memory scales with the combined size of the requested
+ * lists — the stream only bounds the output side.
  *
  * ## Security
  * - List names are validated against `/^[a-zA-Z0-9_-]+$/` to prevent path traversal
@@ -247,8 +250,9 @@ export async function onRequest(context) {
     // Postcondition: The output stream contains all unique domains in sorted order.
     //
     // Complexity: O(N * K) where N = total domains across all lists, K = number of lists.
-    // Memory:     O(K) pointers + chunk buffer (flushed every 5,000 entries).
-    //             The TransformStream avoids buffering the entire output in memory.
+    // Memory:     O(K) pointers + chunk buffer (flushed every 5,000 entries) on the
+    //             output side. The input lists themselves (parsedLists) are fully
+    //             buffered in memory; the TransformStream only bounds output buffering.
     const { readable, writable } = new TransformStream();
     const writer = writable.getWriter();
     const encoder = new TextEncoder();
@@ -295,7 +299,11 @@ export async function onRequest(context) {
             // If we found no minimum, all lists are exhausted
             if (minVal === null) break;
 
-            const ruleStr = `    { "action": "deny", "process": "any", "remote-domains": "${minVal}" }`;
+            // JSON.stringify escapes quotes/backslashes so the output stays valid
+            // JSON even if an upstream list slips hostile characters past the
+            // preprocessing regex (defense in depth — the bash pipeline should
+            // have rejected them already).
+            const ruleStr = `    { "action": "deny", "process": "any", "remote-domains": ${JSON.stringify(minVal)} }`;
 
             if (!isFirstRule) {
               chunkBuffer += ",\n" + ruleStr;
@@ -337,7 +345,13 @@ export async function onRequest(context) {
           await writer.close();
         } catch (err) {
           console.error("Stream generation error:", err);
-          await writer.abort(err);
+          try {
+            await writer.abort(err);
+          } catch {
+            // The writer may already be closed or errored (e.g. the client
+            // disconnected mid-stream) — aborting again would throw and
+            // surface as an unhandled rejection inside waitUntil.
+          }
         }
       })(),
     );

@@ -11,7 +11,7 @@
     "test": "node --expose-gc --test --test-reporter=spec tests/*.test.js",
     "fetch": "./scripts/fetch-blocklists.sh blocklist_sources.json blocklists",
     "dev": "npx wrangler pages dev .",
-    "build:cloudflare": "npm run test && rm -rf tests scripts .github package*.json README.md CONTRIBUTING.md .gitignore LICENSE"
+    "build:cloudflare": "npm run test && rm -rf tests scripts .github package*.json README.md CONTRIBUTING.md AGENTS.md .gitignore LICENSE"
   },
   "author": "Peter Kotouc",
   "license": "MIT"

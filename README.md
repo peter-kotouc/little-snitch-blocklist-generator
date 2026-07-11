@@ -16,7 +16,7 @@ This project has two stages:
 
 1. **GitHub Actions Pipeline** — Runs daily (or on push). Downloads raw domain lists from upstream sources, validates their format, strips comments, deduplicates and sorts entries alphabetically, and commits the clean files to `blocklists/`.
 
-2. **Cloudflare Worker API** — At request time, fetches the pre-sorted blocklist files, performs an O(N) k-way merge with deduplication across lists, and streams a Little Snitch-compatible JSON ruleset back to the client.
+2. **Cloudflare Worker API** — At request time, fetches the pre-sorted blocklist files, performs a streaming k-way merge with deduplication across lists, and streams a Little Snitch-compatible JSON ruleset back to the client.
 
 <p align="center">
   <picture>
@@ -60,7 +60,7 @@ These are sorted alphabetically by their configuration name.
 | Name/File                                                  | Scope & Strategy    | License                                                                       | Source                                                                | Description                                                             |
 | ---------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | 🛡️ **`blocklistproject-ads_preprocessed_sorted.txt`**      | Ads                 | [Unlicense](https://github.com/blocklistproject/Lists/blob/master/LICENSE)    | [`blocklistproject/Lists`](https://github.com/blocklistproject/Lists) | Blocks domains serving ads.                                             |
-| 🛡️ **`blocklistproject-phishing_preprocessed_sorted.txt`** | Phishing            | [Unlicense](https://github.com/blocklistproject/Lists/blob/master/LICENSE)    | [`blocklistproject/Lists`](https://github.com/blocklistproject/Lists) | Blocks malicious domains impersonating legitimate sites for credential. |
+| 🛡️ **`blocklistproject-phishing_preprocessed_sorted.txt`** | Phishing            | [Unlicense](https://github.com/blocklistproject/Lists/blob/master/LICENSE)    | [`blocklistproject/Lists`](https://github.com/blocklistproject/Lists) | Blocks malicious domains impersonating legitimate sites for credential theft. |
 | 🛡️ **`blocklistproject-tracking_preprocessed_sorted.txt`** | Tracking            | [Unlicense](https://github.com/blocklistproject/Lists/blob/master/LICENSE)    | [`blocklistproject/Lists`](https://github.com/blocklistproject/Lists) | Telemetry, analytics, and tracking domains from BlocklistProject.       |
 | 🛡️ **`hagezi-apple_preprocessed_sorted.txt`**              | macOS/iOS Telemetry | [GPL-3.0 license](https://github.com/hagezi/dns-blocklists/blob/main/LICENSE) | [`hagezi/dns-blocklists`](https://github.com/hagezi/dns-blocklists)   | Blocks native Apple telemetry and background device tracking.           |
 | 🛡️ **`hagezi-light_preprocessed_sorted.txt`**              | Ads & Tracking      | [GPL-3.0 license](https://github.com/hagezi/dns-blocklists/blob/main/LICENSE) | [`hagezi/dns-blocklists`](https://github.com/hagezi/dns-blocklists)   | Light version for high performance and zero false positives.            |
@@ -93,7 +93,7 @@ The response is a streaming JSON document compatible with Little Snitch Rule Gro
   "name": "Dynamic Blocklist provided by Peter",
   "upstream_blocklists": [
     {
-      "name": "Hagezi Light DNS Blocklist",
+      "name": "Hagezi Light",
       "license": "GPL-3.0 license",
       "license_url": "..."
     }
@@ -148,9 +148,11 @@ If you'd like complete control over the blocklists and want to run your own endp
 │   └── worker.test.js            # Cloudflare Worker integration tests
 ├── .github/
 │   └── workflows/
-│       └── fetch-blocklists.yml  # CI/CD pipeline definition
+│       ├── ci.yml                # PR / feature-branch test runs
+│       └── fetch-blocklists.yml  # Daily fetch + commit pipeline
 ├── _headers                      # Cloudflare Pages global HTTP headers
 ├── robots.txt                    # Search engine & AI bot crawl directives
+├── AGENTS.md                     # Agent/contributor guide + cross-file update map
 ├── CONTRIBUTING.md               # Contribution guidelines
 └── README.md
 ```

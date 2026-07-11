@@ -27,8 +27,10 @@
  *
  * ## Test Groups
  * 1. **Sunshine Cases** — Valid downloads, IDN/Unicode support, comment stripping
- * 2. **Edge Cases (Failures)** — 404 recovery, empty payloads, invalid syntax rejection
+ * 2. **Edge Cases (Failures)** — 404/connection failures, empty payloads, invalid syntax
  * 3. **Preprocessing Edge Cases** — CRLF stripping, deduplication, comment-only, whitespace
+ * 4. **Idempotency & Environment** — timestamp-only skip, missing CI variable
+ * 5. **Config File Validation** — missing/invalid config files
  */
 import { describe, it, before, after } from "node:test";
 import assert from "node:assert";
@@ -203,8 +205,8 @@ describe("GitHub Actions Bash Edge Cases", () => {
   describe("Edge Cases (Failures and Recoveries)", () => {
     /*
      * Validates the workflow's resilience against dead links (404/500).
-     * The bash script must intercept the HTTP error, skip creating the file locally,
-     * and attempt to run `git checkout` to restore the previous day's list rather than deleting it entirely.
+     * The bash script must intercept the HTTP error and skip creating the file
+     * locally. Downloads go to a temp file, so no broken output is left behind.
      */
     it("rejects 404 missing lists and gracefully recovers", async () => {
       if (isCFPages) return;
@@ -226,6 +228,79 @@ describe("GitHub Actions Bash Edge Cases", () => {
         fileExists,
         false,
         "Bash script left behind a broken txt file on 404 response",
+      );
+    });
+
+    /*
+     * Validates that an existing (previously good) processed file survives an
+     * upstream outage. Because downloads go to a temp file, a 404 must leave
+     * the old file completely untouched — byte for byte.
+     */
+    it("preserves the existing processed file when the upstream later returns 404", async () => {
+      if (isCFPages) return;
+
+      const keeperFile = "tests/temp/keeper-list_preprocessed_sorted.txt";
+      const previousContent =
+        "# Blocklist: keeper-list\n# Source: old\n# License: Unknown (Unknown)\n# Processed: 2020-01-01T00:00:00Z\nold-domain.com\n";
+      writeFileSync(keeperFile, previousContent);
+
+      const config = [
+        {
+          name: "keeper-list",
+          url: `http://localhost:${port}/missing.txt`,
+          description: "",
+        },
+      ];
+      await global.runFetchScript(config);
+
+      assert.strictEqual(
+        existsSync(keeperFile),
+        true,
+        "404 must not delete the previously good file",
+      );
+      assert.strictEqual(
+        readFileSync(keeperFile, "utf-8"),
+        previousContent,
+        "404 must leave the previously good file byte-identical",
+      );
+    });
+
+    /*
+     * Validates resilience against connection-level failures (DNS errors,
+     * refused connections, timeouts) where curl exits non-zero WITHOUT any
+     * HTTP status code. Under `set -e` an unguarded curl would abort the
+     * whole pipeline; the script must instead skip the entry and continue
+     * processing the remaining lists.
+     */
+    it("survives connection-level curl failures and continues with the next list", async () => {
+      if (isCFPages) return;
+
+      const config = [
+        {
+          // Nothing listens on this port — curl fails with "connection refused"
+          name: "conn-refused",
+          url: "http://localhost:59993/list.txt",
+          description: "",
+        },
+        {
+          name: "survivor-list",
+          url: `http://localhost:${port}/good.txt`,
+          description: "",
+        },
+      ];
+
+      // Must not throw — a connection failure is a per-entry error, not fatal
+      await global.runFetchScript(config);
+
+      assert.strictEqual(
+        existsSync("tests/temp/conn-refused_preprocessed_sorted.txt"),
+        false,
+        "Connection failure must not produce an output file",
+      );
+      assert.strictEqual(
+        existsSync("tests/temp/survivor-list_preprocessed_sorted.txt"),
+        true,
+        "Lists after a connection failure must still be processed",
       );
     });
 
@@ -360,11 +435,10 @@ describe("GitHub Actions Bash Edge Cases", () => {
 
     /*
      * Validates that a blocklist containing only comment lines (no actual domains)
-     * is rejected by the processing pipeline. After stripping all `#` comment lines,
-     * the resulting empty output triggers a pipeline failure, preventing an empty
-     * file from being committed. This is consistent with the empty 200 rejection behavior.
+     * is rejected cleanly: no output file, no leftover temp files, no crash, and
+     * — critically — the remaining entries in the config are still processed.
      */
-    it("rejects comment-only files that contain no usable domains", async () => {
+    it("rejects comment-only files without crashing and continues with the next list", async () => {
       if (isCFPages) return;
 
       const config = [
@@ -373,33 +447,36 @@ describe("GitHub Actions Bash Edge Cases", () => {
           url: `http://localhost:${port}/comments-only.txt`,
           description: "",
         },
+        {
+          name: "after-comments",
+          url: `http://localhost:${port}/good.txt`,
+          description: "",
+        },
       ];
 
-      // The script will error because grep -v finds no non-empty lines after comment stripping
-      try {
-        await global.runFetchScript(config);
-      } catch {
-        // Expected: set -e causes exit on grep returning no matches
-      }
+      // Must not throw — a domain-free payload is a per-entry error, not fatal
+      await global.runFetchScript(config);
 
-      const expectedFile = "tests/temp/comments-list_preprocessed_sorted.txt";
-      const fileExists = existsSync(expectedFile);
-
-      // If the file exists, check it doesn't contain any actual domains
-      // (the pipeline may leave a partial file or no file at all)
-      if (fileExists) {
-        const contents = readFileSync(expectedFile, "utf-8");
-        const domainLines = contents
-          .split("\n")
-          .filter((l) => l && !l.startsWith("#"));
-        assert.strictEqual(
-          domainLines.length,
-          0,
-          "Comment-only blocklist should contain no domain entries",
-        );
-      }
-
-      // Either way, the test passes — no usable domains were committed
+      assert.strictEqual(
+        existsSync("tests/temp/comments-list_preprocessed_sorted.txt"),
+        false,
+        "Comment-only blocklist must not produce an output file",
+      );
+      assert.strictEqual(
+        existsSync("tests/temp/comments-list_temp_sorted.txt"),
+        false,
+        "Comment-only blocklist must not leave temp files behind",
+      );
+      assert.strictEqual(
+        existsSync("tests/temp/comments-list_temp.txt"),
+        false,
+        "Comment-only blocklist must not leave temp files behind",
+      );
+      assert.strictEqual(
+        existsSync("tests/temp/after-comments_preprocessed_sorted.txt"),
+        true,
+        "Lists after a comment-only failure must still be processed",
+      );
     });
 
     /*
@@ -524,6 +601,78 @@ describe("GitHub Actions Bash Edge Cases", () => {
         domainLines.length,
         3,
         `Expected 3 domains from the successful list, got ${domainLines.length}`,
+      );
+    });
+  });
+
+  describe("Idempotency & Environment", () => {
+    /*
+     * Validates the skip-if-unchanged behavior: when the downloaded domains are
+     * identical to the existing file, the file must be kept byte-identical —
+     * including the original "# Processed:" timestamp. Without this, every
+     * daily CI run commits every file (the timestamp always changes), bloating
+     * git history with no-op commits of multi-megabyte blobs.
+     */
+    it("keeps the existing file untouched when only the timestamp would change", async () => {
+      if (isCFPages) return;
+
+      const config = [
+        {
+          name: "idempotent-list",
+          url: `http://localhost:${port}/good.txt`,
+          description: "",
+        },
+      ];
+      const expectedFile = "tests/temp/idempotent-list_preprocessed_sorted.txt";
+
+      await global.runFetchScript(config);
+      const firstRun = readFileSync(expectedFile, "utf-8");
+
+      // Cross a second boundary so a rewritten file would carry a new timestamp
+      await new Promise((resolve) => setTimeout(resolve, 1100));
+
+      await global.runFetchScript(config);
+      const secondRun = readFileSync(expectedFile, "utf-8");
+
+      assert.strictEqual(
+        secondRun,
+        firstRun,
+        "Unchanged upstream content must not rewrite the file (timestamp-only churn)",
+      );
+    });
+
+    /*
+     * Validates that the script runs under `set -u` without the CI environment
+     * variable defined at all — the situation for every local `npm run fetch`.
+     * An unguarded `$CI` reference would abort with "CI: unbound variable".
+     */
+    it("runs successfully when the CI environment variable is not defined", async () => {
+      if (isCFPages) return;
+
+      const env = { ...process.env };
+      delete env.CI;
+
+      writeFileSync(
+        "tests/temp_config.json",
+        JSON.stringify([
+          {
+            name: "no-ci-var-list",
+            url: `http://localhost:${port}/good.txt`,
+            description: "",
+          },
+        ]),
+      );
+
+      // Must not throw with CI absent from the environment
+      await execAsync(
+        "./scripts/fetch-blocklists.sh tests/temp_config.json tests/temp",
+        { env },
+      );
+
+      assert.strictEqual(
+        existsSync("tests/temp/no-ci-var-list_preprocessed_sorted.txt"),
+        true,
+        "Script must complete normally without the CI variable defined",
       );
     });
   });

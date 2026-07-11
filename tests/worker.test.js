@@ -15,11 +15,12 @@
  * - All other URLs → 404 Not Found
  *
  * ## Test Groups
- * 1. **Validation** — Query parameter edge cases (missing, invalid, path traversal)
+ * 1. **Validation** — Query parameter edge cases (missing, invalid, path traversal, list cap)
  * 2. **Input Edge Cases** — Empty params, sparse commas, whitespace trimming
  * 3. **Response Structure & Headers** — JSON fields, upstream_blocklists, HTTP headers
  * 4. **Graceful Degradation** — blocklist_sources.json unavailability
- * 5. **Load Testing** — 2M domain merge under CPU/memory constraints
+ * 5. **Output Encoding & Merge Edge Cases** — JSON escaping, comments-only lists
+ * 6. **Load Testing** — 2M domain merge under CPU/memory constraints
  */
 import { describe, it, before, after, afterEach } from "node:test";
 import assert from "node:assert";
@@ -165,6 +166,26 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       assert.strictEqual(response.status, 400);
       const body = await response.text();
       assert.match(body, /Too many lists/);
+    });
+
+    /*
+     * Boundary companion to the 21-list rejection: exactly 20 lists must pass
+     * the cap check. The unknown names then 404 (not 400), proving the request
+     * survived validation and reached the fetch stage.
+     */
+    it("accepts exactly 20 list names at the cap boundary", async () => {
+      const lists = Array.from({ length: 20 }, (_, i) => `list${i}`).join(",");
+      const context = createContext(
+        `https://example.com/api/blocklists?lists=${lists}`,
+      );
+      const response = await onRequest(context);
+      assert.strictEqual(
+        response.status,
+        404,
+        "20 lists must pass the cap check (404 = unknown names, not 400 = rejected)",
+      );
+      const jsonBody = await response.json();
+      assert.strictEqual(jsonBody.missing_lists.length, 20);
     });
 
     /*
@@ -608,6 +629,91 @@ describe("Cloudflare Worker JS Edge Processing", () => {
         json.error,
         /malformed JSON/i,
         "Error message should mention malformed JSON",
+      );
+
+      global.fetch = originalMockFetch;
+    });
+  });
+
+  describe("Output Encoding & Merge Edge Cases", () => {
+    /*
+     * Validates defense-in-depth JSON escaping. The bash pipeline's regex should
+     * never let quotes or backslashes into a preprocessed file, but if a hostile
+     * line ever slips through, the Worker must emit valid JSON rather than a
+     * syntactically broken (or injectable) response.
+     */
+    it("escapes quotes and backslashes in domains so the output stays valid JSON", async () => {
+      const originalMockFetch = global.fetch;
+
+      global.fetch = async (url, options) => {
+        if (url.includes("blocklist_sources.json")) {
+          return originalMockFetch(url, options);
+        }
+        if (url.includes("listQ")) {
+          return new Response(
+            '# header\nbad"quote.com\nback\\slash.com\nnormal.com\n',
+            { status: 200 },
+          );
+        }
+        return originalMockFetch(url, options);
+      };
+
+      const context = createContext(
+        "https://example.com/api/blocklists?lists=listQ",
+      );
+      const response = await onRequest(context);
+      assert.strictEqual(response.status, 200);
+
+      // readStreamAsJSON throws if the streamed body is not valid JSON
+      const json = await readStreamAsJSON(response, context);
+
+      const domains = json.rules.map((r) => r["remote-domains"]);
+      assert.deepStrictEqual(
+        domains.sort(),
+        ['bad"quote.com', "back\\slash.com", "normal.com"].sort(),
+        "Hostile characters must round-trip through JSON escaping intact",
+      );
+
+      // Every rule must carry the full Little Snitch shape
+      for (const rule of json.rules) {
+        assert.strictEqual(rule.action, "deny");
+        assert.strictEqual(rule.process, "any");
+      }
+
+      global.fetch = originalMockFetch;
+    });
+
+    /*
+     * Validates that a blocklist file containing only comment headers (a state
+     * the fetch pipeline should prevent, but which could exist transiently)
+     * still produces a syntactically valid JSON response with zero rules.
+     */
+    it("returns valid JSON with an empty rules array for a comments-only list", async () => {
+      const originalMockFetch = global.fetch;
+
+      global.fetch = async (url, options) => {
+        if (url.includes("blocklist_sources.json")) {
+          return originalMockFetch(url, options);
+        }
+        if (url.includes("listE")) {
+          return new Response("# nothing but comments\n# more comments\n", {
+            status: 200,
+          });
+        }
+        return originalMockFetch(url, options);
+      };
+
+      const context = createContext(
+        "https://example.com/api/blocklists?lists=listE",
+      );
+      const response = await onRequest(context);
+      assert.strictEqual(response.status, 200);
+
+      const json = await readStreamAsJSON(response, context);
+      assert.deepStrictEqual(
+        json.rules,
+        [],
+        "A comments-only list must merge to an empty rules array, not broken JSON",
       );
 
       global.fetch = originalMockFetch;
