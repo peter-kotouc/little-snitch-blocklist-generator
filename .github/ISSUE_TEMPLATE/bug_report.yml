@@ -1,0 +1,46 @@
+name: 🐛 Bug report
+description: Report a problem with the merge API, the fetch pipeline, or the generated rulesets
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+
+        **Note:** a wrongly blocked domain is *not* a bug in this project — please contact the
+        upstream blocklist maintainers instead (see the **Included Blocklists** table in the README).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug — expected behavior vs. actual behavior.
+    validations:
+      required: true
+  - type: input
+    id: api-url
+    attributes:
+      label: API URL (if applicable)
+      description: The full request URL you tried.
+      placeholder: "https://blocklist-api.peter-kotouc.com/api/blocklists?lists=hagezi-light"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        For API/ruleset issues: Little Snitch version and macOS version.
+        For pipeline issues: OS and how you ran the script (`npm run fetch`, CI, ...).
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output or logs
+      description: Error messages, API responses, or script output. Automatically formatted as code.
+      render: shell

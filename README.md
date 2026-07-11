@@ -150,13 +150,17 @@ If you'd like complete control over the blocklists and want to run your own endp
 │   ├── fetch.test.js             # Bash script integration tests
 │   └── worker.test.js            # Cloudflare Worker integration tests
 ├── .github/
+│   ├── ISSUE_TEMPLATE/           # Bug / feature / blocklist request forms
 │   └── workflows/
 │       ├── ci.yml                # PR / feature-branch test runs
 │       └── fetch-blocklists.yml  # Daily fetch + commit pipeline
 ├── _headers                      # Cloudflare Pages global HTTP headers
 ├── robots.txt                    # Search engine & AI bot crawl directives
 ├── AGENTS.md                     # Agent/contributor guide + cross-file update map
+├── CODE_OF_CONDUCT.md            # Community standards (Contributor Covenant 2.1)
 ├── CONTRIBUTING.md               # Contribution guidelines
+├── SECURITY.md                   # Vulnerability reporting policy
+├── SUPPORT.md                    # Where to get help
 └── README.md
 ```
 
