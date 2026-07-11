@@ -8,14 +8,6 @@
     "license_url": "https://github.com/blocklistproject/Lists/blob/master/LICENSE"
   },
   {
-    "name": "blocklistproject-malware",
-    "fullName": "BlocklistProject Malware",
-    "url": "https://blocklistproject.github.io/Lists/alt-version/malware-nl.txt",
-    "description": "Target domains distributing malware",
-    "license": "Unlicense",
-    "license_url": "https://github.com/blocklistproject/Lists/blob/master/LICENSE"
-  },
-  {
     "name": "blocklistproject-phishing",
     "fullName": "BlocklistProject Phishing",
     "url": "https://blocklistproject.github.io/Lists/alt-version/phishing-nl.txt",
