@@ -31,7 +31,9 @@
 #
 # POSTCONDITIONS:
 #   - On success: Updated _preprocessed_sorted.txt files are committed to main
-#   - On no changes: The workflow skips the commit step gracefully
+#   - On no changes: The workflow skips the commit step gracefully. The fetch
+#     script keeps existing files untouched when only the "# Processed:"
+#     timestamp would change, so no-op cron runs produce no commits at all.
 #   - On fetch failure: GitHub Issues are created/updated automatically
 # =============================================================================
 
@@ -47,6 +49,7 @@ on:
       - ".github/workflows/fetch-blocklists.yml"
       - "tests/**"
       - "scripts/**"
+      - "functions/**" # Worker changes on main must still run the test suite
       - "package.json"
   schedule:
     # Run every day at 04:00 UTC

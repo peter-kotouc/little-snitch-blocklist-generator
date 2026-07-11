@@ -15,11 +15,12 @@
  * - All other URLs → 404 Not Found
  *
  * ## Test Groups
- * 1. **Validation** — Query parameter edge cases (missing, invalid, path traversal)
+ * 1. **Validation** — Query parameter edge cases (missing, invalid, path traversal, list cap)
  * 2. **Input Edge Cases** — Empty params, sparse commas, whitespace trimming
  * 3. **Response Structure & Headers** — JSON fields, upstream_blocklists, HTTP headers
  * 4. **Graceful Degradation** — blocklist_sources.json unavailability
- * 5. **Load Testing** — 2M domain merge under CPU/memory constraints
+ * 5. **Output Encoding & Merge Edge Cases** — JSON escaping, comments-only lists
+ * 6. **Load Testing** — 2M domain merge under CPU/memory constraints
  */
 import { describe, it, before, after, afterEach } from "node:test";
 import assert from "node:assert";
@@ -168,6 +169,26 @@ describe("Cloudflare Worker JS Edge Processing", () => {
     });
 
     /*
+     * Boundary companion to the 21-list rejection: exactly 20 lists must pass
+     * the cap check. The unknown names then 404 (not 400), proving the request
+     * survived validation and reached the fetch stage.
+     */
+    it("accepts exactly 20 list names at the cap boundary", async () => {
+      const lists = Array.from({ length: 20 }, (_, i) => `list${i}`).join(",");
+      const context = createContext(
+        `https://example.com/api/blocklists?lists=${lists}`,
+      );
+      const response = await onRequest(context);
+      assert.strictEqual(
+        response.status,
+        404,
+        "20 lists must pass the cap check (404 = unknown names, not 400 = rejected)",
+      );
+      const jsonBody = await response.json();
+      assert.strictEqual(jsonBody.missing_lists.length, 20);
+    });
+
+    /*
      * Validates that the Cloudflare Worker responds with an HTTP 400 Bad Request
      * if the user completely omits the `?lists=` query configuration parameter.
      */
@@ -211,12 +232,61 @@ describe("Cloudflare Worker JS Edge Processing", () => {
     });
 
     /*
-     * Validates that the Worker correctly identifies missing or invalid blocklist configurations
-     * and returns a detailed 404 JSON error response instead of silently failing or returning partial data.
+     * Validates graceful degradation: when SOME requested lists are missing
+     * (e.g., a blocklist was removed from the repo but a subscriber's URL still
+     * names it), the Worker merges the lists that exist and transparently
+     * reports the rest in `skipped_lists` instead of failing the whole request.
+     * This keeps existing Little Snitch subscriptions alive across removals.
      */
-    it("returns a 404 JSON error if one or more requested blocklists are missing", async () => {
+    it("merges available lists and reports missing ones in skipped_lists", async () => {
       const context = createContext(
         "https://example.com/api/blocklists?lists=listA,missing-list-name",
+      );
+
+      const response = await onRequest(context);
+      assert.strictEqual(
+        response.status,
+        200,
+        "Partial availability must degrade gracefully, not fail the request",
+      );
+
+      const json = await readStreamAsJSON(response, context);
+
+      assert.deepStrictEqual(
+        json.skipped_lists,
+        ["missing-list-name"],
+        "Missing lists must be reported transparently in skipped_lists",
+      );
+      assert.ok(
+        json.rules.length > 0,
+        "Rules from the available lists must still be merged",
+      );
+      assert.match(
+        json.description,
+        /listA/,
+        "Description must name the merged lists",
+      );
+      assert.doesNotMatch(
+        json.description,
+        /missing-list-name/,
+        "Description must not claim to contain skipped lists",
+      );
+      // Attribution must cover only the lists that are actually merged
+      assert.deepStrictEqual(
+        json.upstream_blocklists.map((b) => b.name),
+        ["Test List A"],
+      );
+    });
+
+    /*
+     * Validates the fail-closed boundary of graceful degradation: when NONE of
+     * the requested lists exist there is nothing to serve, and returning an
+     * empty ruleset would silently disable the client's blocking. That case
+     * must remain a hard 404 naming every missing list.
+     */
+    it("returns a 404 JSON error when ALL requested blocklists are missing", async () => {
+      const context = createContext(
+        "https://example.com/api/blocklists?lists=missing-one,missing-two",
       );
 
       const response = await onRequest(context);
@@ -229,9 +299,12 @@ describe("Cloudflare Worker JS Edge Processing", () => {
       const jsonBody = await response.json();
       assert.strictEqual(
         jsonBody.error,
-        "One or more requested blocklists were not found.",
+        "None of the requested blocklists were found.",
       );
-      assert.deepStrictEqual(jsonBody.missing_lists, ["missing-list-name"]);
+      assert.deepStrictEqual(jsonBody.missing_lists, [
+        "missing-one",
+        "missing-two",
+      ]);
     });
 
     /*
@@ -608,6 +681,91 @@ describe("Cloudflare Worker JS Edge Processing", () => {
         json.error,
         /malformed JSON/i,
         "Error message should mention malformed JSON",
+      );
+
+      global.fetch = originalMockFetch;
+    });
+  });
+
+  describe("Output Encoding & Merge Edge Cases", () => {
+    /*
+     * Validates defense-in-depth JSON escaping. The bash pipeline's regex should
+     * never let quotes or backslashes into a preprocessed file, but if a hostile
+     * line ever slips through, the Worker must emit valid JSON rather than a
+     * syntactically broken (or injectable) response.
+     */
+    it("escapes quotes and backslashes in domains so the output stays valid JSON", async () => {
+      const originalMockFetch = global.fetch;
+
+      global.fetch = async (url, options) => {
+        if (url.includes("blocklist_sources.json")) {
+          return originalMockFetch(url, options);
+        }
+        if (url.includes("listQ")) {
+          return new Response(
+            '# header\nbad"quote.com\nback\\slash.com\nnormal.com\n',
+            { status: 200 },
+          );
+        }
+        return originalMockFetch(url, options);
+      };
+
+      const context = createContext(
+        "https://example.com/api/blocklists?lists=listQ",
+      );
+      const response = await onRequest(context);
+      assert.strictEqual(response.status, 200);
+
+      // readStreamAsJSON throws if the streamed body is not valid JSON
+      const json = await readStreamAsJSON(response, context);
+
+      const domains = json.rules.map((r) => r["remote-domains"]);
+      assert.deepStrictEqual(
+        domains.sort(),
+        ['bad"quote.com', "back\\slash.com", "normal.com"].sort(),
+        "Hostile characters must round-trip through JSON escaping intact",
+      );
+
+      // Every rule must carry the full Little Snitch shape
+      for (const rule of json.rules) {
+        assert.strictEqual(rule.action, "deny");
+        assert.strictEqual(rule.process, "any");
+      }
+
+      global.fetch = originalMockFetch;
+    });
+
+    /*
+     * Validates that a blocklist file containing only comment headers (a state
+     * the fetch pipeline should prevent, but which could exist transiently)
+     * still produces a syntactically valid JSON response with zero rules.
+     */
+    it("returns valid JSON with an empty rules array for a comments-only list", async () => {
+      const originalMockFetch = global.fetch;
+
+      global.fetch = async (url, options) => {
+        if (url.includes("blocklist_sources.json")) {
+          return originalMockFetch(url, options);
+        }
+        if (url.includes("listE")) {
+          return new Response("# nothing but comments\n# more comments\n", {
+            status: 200,
+          });
+        }
+        return originalMockFetch(url, options);
+      };
+
+      const context = createContext(
+        "https://example.com/api/blocklists?lists=listE",
+      );
+      const response = await onRequest(context);
+      assert.strictEqual(response.status, 200);
+
+      const json = await readStreamAsJSON(response, context);
+      assert.deepStrictEqual(
+        json.rules,
+        [],
+        "A comments-only list must merge to an empty rules array, not broken JSON",
       );
 
       global.fetch = originalMockFetch;

@@ -51,6 +51,7 @@ Add the new blocklist to the **Included Blocklists** markdown table in `README.m
 
 - Ensure you link to the original repository under `Source`.
 - Ensure you link to the blocklist's license file under `License`.
+- See the **ripple map** in [AGENTS.md](AGENTS.md) for the full list of files that must stay in sync when adding or removing a blocklist (e.g. `recommendations.json` presets).
 
 ### 4. Branching Strategy
 
