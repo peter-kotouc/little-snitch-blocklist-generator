@@ -1,7 +1,7 @@
 # Blocklist: blocklistproject-tracking
 # Source: https://blocklistproject.github.io/Lists/alt-version/tracking-nl.txt
 # License: Unlicense (https://github.com/blocklistproject/Lists/blob/master/LICENSE)
-# Processed: 2026-07-11T20:41:39Z
+# Processed: 2026-07-18T05:57:19Z
 000-000-37645t2783296323fn2.calibrescientifics.com
 0001-metrics1-data-hicloud-com.geac.dbankedge.cn
 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -3481,6 +3481,7 @@ ad-server.samsungads.com
 ad-serverparc.nl
 ad-stir.com
 ad-track.jp
+ad-tracker.samsungads.com
 ad-x.co.uk
 ad.12dt.com
 ad.71i.de
@@ -5852,6 +5853,7 @@ analytics-eu.cloud.coveo.com
 analytics-eu.socialhippo.be
 analytics-eu.socialhippo.nl
 analytics-eu.trustyou.com
+analytics-events.apple.com
 analytics-f1-venues.yinzcam.com
 analytics-frame.sendsafely.com
 analytics-gtm.redbubble.com
@@ -7680,7 +7682,6 @@ analytics.ceridwen.com
 analytics.ceriumsoft.com
 analytics.cert.pl
 analytics.certapet.com
-analytics.certifiedit.net
 analytics.certo-app.de
 analytics.cetteup.com
 analytics.ceu.com
@@ -23781,6 +23782,7 @@ click-trk.com
 click.aaptiv.com
 click.alexabyte.site
 click.amazingfacts.org
+click.appwonders.org
 click.avenuehomes.net
 click.beatport-email.com
 click.bible.com
@@ -46909,7 +46911,6 @@ ip.live.fin.ag
 ip.liveryvideo.com
 ip.lovely-app.com
 ip.marquer.io
-ip.me
 ip.mktindex.com
 ip.moojing.com
 ip.mrfriday.com
@@ -47890,6 +47891,7 @@ jzbznqbz81.alphonso.tv
 jzd3dk.com
 jzvln.famousfootwear.com
 jzvsc.thermoworks.com
+jzzuvzq98.alphonso.tv
 k-analytix.com
 k-ring-fallback.msedge.net
 k-ring.msedge.net
@@ -48111,6 +48113,7 @@ kfw02.webtrekk.net
 kfw03.webtrekk.net
 kfw04.webtrekk.net
 kg-ad-lgsmartad-com.aws-prd.net
+kg-legacy-analytics.servicebus.windows.net
 kg-logagent-st.kingsgroupgames.com
 kg.ad.lgsmartad.com
 kg.lgsmartad.com
@@ -48611,6 +48614,7 @@ krishnaw400.alphonso.tv
 krishnaw401.alphonso.tv
 krishnaw404.alphonso.tv
 krishnaw405.alphonso.tv
+krishnaw408.alphonso.tv
 krishnaw411.alphonso.tv
 krishnaw412.alphonso.tv
 krishnaw413.alphonso.tv
@@ -56661,6 +56665,7 @@ marketing.watercannon.com
 marketing.wbm.com
 marketing.wbresearch.com
 marketing.webgruppen.no
+marketing.whitewallsolutions.com
 marketing.whysymphony.com
 marketing.willamettewines.com
 marketing.wilmingtonandbeaches.com
@@ -80304,6 +80309,7 @@ newrelic.uk
 newrelic.ventures
 newrelic.works
 newrelic.wtf
+news-analytics-events.apple.com
 news-app-events.apple.com
 news-events.apple.com
 news-lichter.de
@@ -92793,6 +92799,7 @@ pocitadlo.cz
 pocitadlo.nejen.cz
 pocitadlolibise.seznam.cz
 pocketfaucet.com
+podcasts-analytics-events.apple.com
 podfdch.com
 podiumpresto.com
 podph.mielleorganics.com
@@ -93169,6 +93176,7 @@ priv.stadtritter.de
 priv.w-vt.de
 privacy-analytics.cc
 privacy-api.9gag.com
+privacy-backend.samsungads.com
 privacy-cs.mail.ru
 privacy-digital.diip.co.uk
 privacy-digital.infracapital.co.uk
@@ -102490,6 +102498,7 @@ servidorstp.thaisdiasnutri.com
 serving-sys.com
 servingclks.com
 servmetric.com
+servo-report.dvdfab.cn
 servo-report.keepstreams.com
 servo-report.streamfab.com
 servpaulapro.paulacunha.com.br
@@ -121355,7 +121364,6 @@ stat.ferico.de
 stat.ferratec.ch
 stat.feustel.eu
 stat.ff.uni-lj.si
-stat.fi
 stat.fibi.co.il
 stat.fincabmedia.fi
 stat.finessum.com
@@ -130841,7 +130849,6 @@ strongtrk.com
 structurerod.com
 struq.com
 sts.advertising.microsoft.com
-sts.amazonaws.com
 sts.blr.com
 sts.ipsonetwork.net
 sts.livrariadopsicologo.com.br
@@ -138383,6 +138390,7 @@ tutorialstreet.ru
 tutorthing.com
 tutta.site
 tuutrk.com
+tv-analytics-events.apple.com
 tv-api.blivenyc.com
 tv-static.scdn.co
 tv.ads.spotx.tv
@@ -138566,6 +138574,7 @@ ua.seo-summary.de
 ua2.coveo.com
 uadx.com
 uae.nujum.ae
+uaenorth-0.in.applicationinsights.azure.com
 uafkj.wondercide.com
 uafms.ocbc.com
 uagmu.cmkconstructioninc.com
@@ -140923,7 +140932,6 @@ wb.momentuminvestments.io
 wb22trk.com
 wbdiul.dywanyluszczow.eu
 wbg.tt.omtrdc.net
-wbinsights.com
 wblacknet-224.top
 wbm.wochenblitz.com
 wbte.cimalp.fr
@@ -141850,7 +141858,6 @@ whatismyip.sky.com
 whatismyip.uno
 whatismyip1.itsupport247.net
 whatismyip4.com
-whatismyipaddress.com
 whatismyipaddressnow.co
 whatismyiplookup.com
 whatismyippro.com
